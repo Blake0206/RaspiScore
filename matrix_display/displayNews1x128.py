@@ -26,7 +26,7 @@ def display_headline(matrix, headline):
 
     offscreen_canvas.Clear()
 
-    logo = Image.open("espn_logo.png")
+    logo = Image.open("./media/espn_logo.png")
     logo = ImageEnhance.Brightness(logo).enhance(0.6)
     logo.thumbnail((150, 64), Image.Resampling.BOX)
     matrix.SetImage(logo.convert('RGB'), -7, 0)

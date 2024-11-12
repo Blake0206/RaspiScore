@@ -24,7 +24,7 @@ def display_league(matrix, league):
 
     offscreen_canvas.Clear()
 
-    logo_file = str(str(league) + ".png")
+    logo_file = str("./media/" + str(league) + ".png")
     logo = Image.open(logo_file)
     #logo = ImageEnhance.Brightness(logo).enhance(0.6)
     logo.thumbnail((150, 64), Image.Resampling.BOX)
