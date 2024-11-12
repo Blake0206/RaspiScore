@@ -1,0 +1,1824 @@
+{
+  "articles": [
+    {
+      "byline": "Stephen Holder",
+      "categories": [
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "description": "Indianapolis Colts",
+          "id": 2942,
+          "sportId": 28,
+          "team": {
+            "description": "Indianapolis Colts",
+            "id": 11,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/11"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=11"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/ind/indianapolis-colts"
+                }
+              }
+            }
+          },
+          "teamId": 11,
+          "type": "team",
+          "uid": "s:20~l:28~t:11"
+        },
+        {
+          "athlete": {
+            "description": "Richardson, Anthony",
+            "id": 4429084,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/4429084"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=4429084"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/4429084/anthony-richardson"
+                }
+              }
+            }
+          },
+          "athleteId": 4429084,
+          "createDate": "2024-10-27T17:52:00Z",
+          "description": "Richardson, Anthony",
+          "id": 447022,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:4429084"
+        },
+        {
+          "athlete": {
+            "description": "Downs, Josh",
+            "id": 4688813,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/4688813"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=4688813"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/4688813/josh-downs"
+                }
+              }
+            }
+          },
+          "athleteId": 4688813,
+          "createDate": "2024-10-27T17:52:00Z",
+          "description": "Downs, Josh",
+          "id": 442393,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:4688813"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "guid": "582d14eb-da61-e505-cc40-d972a1b60ed1",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "guid": "582d14ebda61e505cc40d972a1b60ed1",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "guid": "07b29d35-1ac5-3571-b142-5743a0a841c0",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "guid": "bf393d54-8b18-3482-bddf-1836d3e9768b",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "guid": "2a554dc1-ebf3-3b98-8a4d-19130cb8473c",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "guid": "bfee0387-e51a-3429-baa1-8f8f84c37769",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:52:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "d41240d66e2eb",
+      "description": "Richardson put the Colts ahead on what appeared to be a busted coverage by the Texans.",
+      "headline": "Richardson hits Downs on 69-yard touchdown pass for Colts",
+      "images": [
+        {
+          "alt": "Anthony Richardson",
+          "caption": "Anthony Richardson connected with Josh Downs on the long first-quarter TD.",
+          "credit": "AP Photo/Eric Christian Smith",
+          "dataSourceIdentifier": "a3aa8cd71558a",
+          "height": 342,
+          "id": 42034346,
+          "name": "Anthony Richardson [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1027/r1406550_608x342_16-9.jpg",
+          "width": 608
+        }
+      ],
+      "lastModified": "2024-10-27T17:55:48Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42033623"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42033623"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=42033623"
+        },
+        "web": {
+          "href": "https://www.espn.com/nfl/story/_/id/42033623/indianapolis-colts-69-yard-touchdown-pass-anthony-richardson-houston-texans-week-8"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T17:55:52Z",
+      "type": "Story"
+    },
+    {
+      "byline": "Jahmyr Gibbs",
+      "categories": [
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "description": "Detroit Lions",
+          "id": 1805,
+          "sportId": 28,
+          "team": {
+            "description": "Detroit Lions",
+            "id": 8,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/8"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=8"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/det/detroit-lions"
+                }
+              }
+            }
+          },
+          "teamId": 8,
+          "type": "team",
+          "uid": "s:20~l:28~t:8"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "description": "Tennessee Titans",
+          "id": 2886,
+          "sportId": 28,
+          "team": {
+            "description": "Tennessee Titans",
+            "id": 10,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/10"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=10"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/ten/tennessee-titans"
+                }
+              }
+            }
+          },
+          "teamId": 10,
+          "type": "team",
+          "uid": "s:20~l:28~t:10"
+        },
+        {
+          "athlete": {
+            "description": "Gibbs, Jahmyr",
+            "id": 4429795,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/4429795"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=4429795"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/4429795/jahmyr-gibbs"
+                }
+              }
+            }
+          },
+          "athleteId": 4429795,
+          "createDate": "2024-10-27T17:46:00Z",
+          "description": "Gibbs, Jahmyr",
+          "id": 438406,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:4429795"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "guid": "0a0aea599a5e01b357a30151cf4bf393",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "guid": "0a0aea59-9a5e-01b3-57a3-0151cf4bf393",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "guid": "56caffee-178d-f6f2-a076-b277486b8c32",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "guid": "56caffee178df6f2a076b277486b8c32",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "guid": "d82978d9-aea7-3a38-b79d-ac2f30f2537b",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "guid": "d85aed19-e3b8-3788-935e-55f636ad86e9",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:46:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "2925c0be4756a",
+      "description": "The Detroit running back hit 22.03 mph on the run.",
+      "headline": "Jahmyr Gibbs races 70 yards to give Lions an early lead",
+      "images": [
+        {
+          "credit": "Gregory Shamus/Getty Images",
+          "dataSourceIdentifier": "8d9bf22fcf478",
+          "height": 729,
+          "id": 42034246,
+          "name": "Jahmyr Gibbs [1296x729]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1027/r1406539_1296x729_16-9.jpg",
+          "width": 1296
+        }
+      ],
+      "lastModified": "2024-10-27T17:53:00Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42033724"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42033724"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=42033724"
+        },
+        "web": {
+          "href": "https://www.espn.com/nfl/story/_/id/42033724/detroit-lions-jahmyr-gibbs-70-yard-td-run"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T17:53:04Z",
+      "type": "Story"
+    },
+    {
+      "byline": "Mike Reiss",
+      "categories": [
+        {
+          "createDate": "2024-10-27T17:29:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T17:29:00Z",
+          "description": "New England Patriots",
+          "id": 2321,
+          "sportId": 28,
+          "team": {
+            "description": "New England Patriots",
+            "id": 17,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/17"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=17"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/ne/new-england-patriots"
+                }
+              }
+            }
+          },
+          "teamId": 17,
+          "type": "team",
+          "uid": "s:20~l:28~t:17"
+        },
+        {
+          "athlete": {
+            "description": "Maye, Drake",
+            "id": 4431452,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/4431452"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=4431452"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/4431452/drake-maye"
+                }
+              }
+            }
+          },
+          "athleteId": 4431452,
+          "createDate": "2024-10-27T17:29:00Z",
+          "description": "Maye, Drake",
+          "id": 490129,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:4431452"
+        },
+        {
+          "createDate": "2024-10-27T17:29:00Z",
+          "guid": "0078f353fe3e67eda42c43cca0568e21",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:29:00Z",
+          "guid": "0078f353-fe3e-67ed-a42c-43cca0568e21",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:29:00Z",
+          "guid": "2fbd2f9e-624d-3e63-9bb5-9bb965782b68",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:29:00Z",
+          "guid": "e686c190-648a-343c-a64d-333884c6616b",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:29:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "0b9c30e363056",
+      "description": "Maye gave the Patriots a 7-0 lead in the first quarter.",
+      "headline": "Patriots QB Drake Maye sprints to 17-yard TD vs. Jets",
+      "images": [
+        {
+          "credit": "Adam Glanzman/Getty Images",
+          "dataSourceIdentifier": "dddf363af85a7",
+          "height": 342,
+          "id": 42034166,
+          "name": "Drake Maye vs. Jets [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1027/r1406541_608x342_16-9.jpg",
+          "width": 608
+        }
+      ],
+      "lastModified": "2024-10-27T17:44:54Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42034244"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42034244"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=42034244"
+        },
+        "web": {
+          "href": "https://www.espn.com/nfl/story/_/id/42034244/patriots-qb-drake-maye-sprints-17-yard-td-vs-jets"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T17:44:55Z",
+      "type": "Story"
+    },
+    {
+      "byline": "Marc Raimondi",
+      "categories": [
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "description": "Atlanta Falcons",
+          "id": 1979,
+          "sportId": 28,
+          "team": {
+            "description": "Atlanta Falcons",
+            "id": 1,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/1"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=1"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/atl/atlanta-falcons"
+                }
+              }
+            }
+          },
+          "teamId": 1,
+          "type": "team",
+          "uid": "s:20~l:28~t:1"
+        },
+        {
+          "athlete": {
+            "description": "Pitts, Kyle",
+            "id": 4360248,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/4360248"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=4360248"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/4360248/kyle-pitts"
+                }
+              }
+            }
+          },
+          "athleteId": 4360248,
+          "createDate": "2024-10-27T17:18:00Z",
+          "description": "Pitts, Kyle",
+          "id": 470090,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:4360248"
+        },
+        {
+          "athlete": {
+            "description": "Cousins, Kirk",
+            "id": 14880,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/14880"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=14880"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/14880/kirk-cousins"
+                }
+              }
+            }
+          },
+          "athleteId": 14880,
+          "createDate": "2024-10-27T17:18:00Z",
+          "description": "Cousins, Kirk",
+          "id": 103992,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:14880"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "49fd392a86fe4df31b779bbfa18b2ad5",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "49fd392a-86fe-4df3-1b77-9bbfa18b2ad5",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "21339ff2-bf80-34eb-ad7b-a2bb47f95ad3",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "53bec012-c2ed-bc7c-a8d5-438611f9faa1",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "53bec012c2edbc7ca8d5438611f9faa1",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "7290d27f-bdc5-21fe-0800-c4ae5597cd34",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "7290d27fbdc521fe0800c4ae5597cd34",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "4562b90f-388d-3e1b-91b7-ce57621fa786",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:18:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "9628a14210dbc",
+      "description": "The Falcons opened up scoring early against the Buccaneers.",
+      "headline": "Kirk Cousins, Kyle Pitts connect for 36-yard Falcons TD",
+      "images": [
+        {
+          "credit": "Photo by Kevin Sabitus/Getty Images",
+          "dataSourceIdentifier": "4dc19c84bfa85",
+          "height": 342,
+          "id": 42033822,
+          "name": "Kyle Pitts [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1027/r1406532_608x342_16-9.jpg",
+          "width": 608
+        }
+      ],
+      "lastModified": "2024-10-27T17:33:04Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42033771"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/42033771"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=42033771"
+        },
+        "web": {
+          "href": "https://www.espn.com/nfl/story/_/id/42033771/atlanta-falcons-td-kyle-pitts-kirk-cousins-td-vs-tampa-bay-bucs"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T17:33:05Z",
+      "type": "Story"
+    },
+    {
+      "byline": "ESPN staff",
+      "categories": [
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "description": "event",
+          "id": 409221,
+          "sportId": 0,
+          "topicId": 778,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "description": "daily",
+          "id": 409222,
+          "sportId": 0,
+          "topicId": 779,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "description": "transaction",
+          "id": 409223,
+          "sportId": 0,
+          "topicId": 780,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "guid": "b95f420f-72e3-eee7-c241-735028efdf13",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "guid": "b95f420f72e3eee7c241735028efdf13",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "guid": "b66e959d-b64e-9bd6-7d5c-1bcb0d53c0cb",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "guid": "b66e959db64e9bd67d5c1bcb0d53c0cb",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "guid": "18809aab-3220-5e1a-8be1-2eee207d5a35",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T17:15:00Z",
+          "guid": "18809aab32205e1a8be12eee207d5a35",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "45693dbff954f",
+      "description": "We're following all of the latest deals, buzz and player swaps ahead of the NFL trade deadline, which is Nov. 5.",
+      "headline": "2024 NFL trade deadline: Updates, latest deals, rumors, news",
+      "images": [
+        {
+          "alt": "Christian Kirk",
+          "caption": "Christian Kirk looks like Trevor Lawrence's favorite target.",
+          "credit": "Mike Carlson/Getty Images",
+          "height": 342,
+          "id": 35168677,
+          "name": "Christian Kirk [608x342] - Copy",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2022/0927/r1067482_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "caption": "Rams WR Cooper Kupp made his season debut in Week 5 against the Eagles. He had 118 yards on eight catches.",
+          "credit": "AP Photo/Kevork Djansezian",
+          "dataSourceIdentifier": "fde77ac8f55b0",
+          "height": 342,
+          "id": 38616096,
+          "name": "Cooper Kupp vs Eagles [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2023/1009/r1236314_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "credit": "Steve Roberts-USA TODAY Sports",
+          "dataSourceIdentifier": "16bf332761c8c",
+          "height": 342,
+          "id": 38842951,
+          "name": "DeAndre Hopkins [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2023/1107/r1250083_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "credit": "Cooper Neill/Getty Images",
+          "dataSourceIdentifier": "2b9105543b419",
+          "height": 342,
+          "id": 38690685,
+          "name": "Davante Adams [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2023/1019/r1240329_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "credit": "AP Photo/Phelan M. Ebenhack",
+          "height": 342,
+          "id": 35402955,
+          "name": "Roy Robertson-Harris  [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2023/0108/r1114876_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "caption": "Kirk Herbstreit joins Pat McAfee and discusses a variety of NFL topics, including his optimism surrounding the Bills' Amari Cooper trade.",
+          "height": 324,
+          "name": "Herbstreit to McAfee: I'm feeling good about Bills, Bengals",
+          "type": "Media",
+          "url": "https://a.espncdn.com/media/motion/2024/1017/dm_241017_mcafee_bills_bengals/dm_241017_mcafee_bills_bengals.jpg",
+          "width": 576
+        }
+      ],
+      "lastModified": "2024-10-27T17:24:35Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41400431"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41400431"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=41400431"
+        },
+        "web": {
+          "href": "https://www.espn.com/nfl/story/_/id/41400431/2024-nfl-trade-deadline-news-deals-reactions-takeaways-updates"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T17:24:38Z",
+      "type": "Story"
+    },
+    {
+      "byline": "AJ Mass",
+      "categories": [
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "description": "fantasy",
+          "id": 409228,
+          "sportId": 0,
+          "topicId": 785,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "description": "Fantasy NFL",
+          "id": 12024,
+          "league": {
+            "description": "Fantasy NFL",
+            "id": 3080,
+            "links": {
+              "api": {
+                "leagues": {}
+              },
+              "mobile": {
+                "leagues": {}
+              },
+              "web": {
+                "leagues": {}
+              }
+            }
+          },
+          "leagueId": 3080,
+          "sportId": 3080,
+          "type": "league",
+          "uid": "s:20~l:3080"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "description": "news - fantasy football",
+          "id": 152381,
+          "sportId": 0,
+          "topicId": 401,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "description": "news - fantasy",
+          "id": 141870,
+          "sportId": 0,
+          "topicId": 240,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "5fa21f62-62f7-4bc1-961a-6c7485fa8f45",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "a472a0eb-d630-3568-bf2a-59572429de6c",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "ca127063-3a37-f49a-a3fc-0eeb89492361",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "ca1270633a37f49aa3fc0eeb89492361",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "dfe97910-82fd-48e0-fe79-12aaa66fd4f2",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "dfe9791082fd48e0fe7912aaa66fd4f2",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "3d170ccb7b7554f178c4cfbf3ee3322d",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:54:00Z",
+          "guid": "3d170ccb-7b75-54f1-78c4-cfbf3ee3322d",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "62cb674a41fd1",
+      "description": "AJ Mass provides updated inactives and analysis based on the latest reports and official announcements leading up to kickoff.",
+      "headline": "Fantasy football Week 8 inactives: Status for Tee Higgins, Jayden Daniels and others",
+      "images": [
+        {
+          "alt": "Jayden Daniels #5 of the Washington Commanders looks on prior to the game against the Carolina Panthers.",
+          "caption": "Will we see Jayden Daniels with his helmet on this Sunday? We might not know until 90 minutes before kickoff.",
+          "credit": "Getty Images",
+          "dataSourceIdentifier": "f8169af88998c",
+          "height": 324,
+          "id": 42018787,
+          "name": "Jayden Daniels [576x324]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1026/r1406201_576x324_16-9.jpg",
+          "width": 576
+        },
+        {
+          "alt": "Cleveland Browns cornerback Denzel Ward (21) breaks up a pass intended for Cincinnati Bengals wide receiver Tee Higgins (5).",
+          "caption": "Tee Higgins (left) has a bit of an uphill climb to play after being added to the injury report on Friday.",
+          "credit": "Scott Galvin-Imagn Images",
+          "dataSourceIdentifier": "43315edd75b92",
+          "height": 324,
+          "id": 42018848,
+          "name": "Tee Higgins [576x324]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1026/r1406204_576x324_16-9.jpg",
+          "width": 576
+        },
+        {
+          "caption": "Stephania Bell details why there's a chance DK Metcalf can play this week.",
+          "height": 324,
+          "name": "Why Stephania Bell isn't ruling out DK Metcalf to play in Week 8",
+          "type": "Media",
+          "url": "https://a.espncdn.com/media/motion/2024/1025/dm_241025_Why_Stephania_Bell_isnt_ruling_out_DK_Metcalf_to_play_in_Week_8/dm_241025_Why_Stephania_Bell_isnt_ruling_out_DK_Metcalf_to_play_in_Week_8.jpg",
+          "width": 576
+        }
+      ],
+      "lastModified": "2024-10-27T16:54:23Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41109342"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41109342"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/wireless/story?storyId=41109342"
+        },
+        "web": {
+          "href": "https://www.espn.com/fantasy/football/story/_/page/FFSundayInactives-41109342/nfl-fantasy-football-espn-injured-inactives-watchlist-week-8-2024-october-27"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T16:54:25Z",
+      "type": "Story"
+    },
+    {
+      "byline": "ESPN Staff",
+      "categories": [
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "description": "daily",
+          "id": 409222,
+          "sportId": 0,
+          "topicId": 779,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "description": "culture",
+          "id": 409220,
+          "sportId": 0,
+          "topicId": 777,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "guid": "b66e959d-b64e-9bd6-7d5c-1bcb0d53c0cb",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "guid": "b66e959db64e9bd67d5c1bcb0d53c0cb",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "guid": "3ec1da6be74efda5be3a18190ec8aa5d",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T16:30:00Z",
+          "guid": "3ec1da6b-e74e-fda5-be3a-18190ec8aa5d",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "497ea841888f5",
+      "description": "NFL stars caught eyes and cameras alike with their stylish arrivals to Week 8 games.",
+      "headline": "NFL stars bring Halloween spirit, honor NBA icons in Week 8 arrivals",
+      "images": [
+        {
+          "alt": "Philadelphia Eagles linebacker Nakobe Dean sported a sweater featuring longtime 76ers star Allen Iverson.",
+          "caption": "Philadelphia Eagles linebacker Nakobe Dean sported a sweater featuring longtime 76ers star Allen Iverson.",
+          "credit": "Eagles/X",
+          "dataSourceIdentifier": "82a5b518a8649",
+          "height": 342,
+          "id": 42033110,
+          "name": "Nakobe [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1027/r1406506_608x342_16-9.png",
+          "width": 608
+        }
+      ],
+      "lastModified": "2024-10-27T16:31:41Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41986328"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41986328"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=41986328"
+        },
+        "web": {
+          "href": "https://www.espn.com/nfl/story/_/id/41986328/nfl-fashion-week-8-arrivals"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T16:32:25Z",
+      "type": "Story"
+    },
+    {
+      "categories": [
+        {
+          "createDate": "2024-10-27T13:45:26Z",
+          "description": "nfl game footage",
+          "id": 177758,
+          "sportId": 0,
+          "topicId": 615,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T13:45:26Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "athlete": {
+            "description": "Pearsall, Ricky",
+            "id": 4428209,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/4428209"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=4428209"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/4428209/ricky-pearsall"
+                }
+              }
+            }
+          },
+          "athleteId": 4428209,
+          "createDate": "2024-10-27T13:45:26Z",
+          "description": "Pearsall, Ricky",
+          "id": 392199,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:4428209"
+        },
+        {
+          "createDate": "2024-10-27T13:45:26Z",
+          "guid": "87c807fb-79fe-e421-02d2-6536bbe0618f",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T13:45:26Z",
+          "guid": "c1e6e1be-2b03-34b7-b772-b06b66ce94ab",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T13:45:26Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T13:45:26Z",
+          "guid": "17256dc5-749f-706a-efe0-b8d4f205c4f3",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T13:45:26Z",
+          "guid": "17256dc5749f706aefe0b8d4f205c4f3",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "ae5bfcf092208",
+      "description": "Lindsey Thiry reports on how the quick work of a San Francisco police officer and a surgeon helped 49ers rookie Ricky Pearsall survive a gunshot to the chest and return to the field.",
+      "headline": "How two heroes helped Ricky Pearsall return from a gunshot wound",
+      "images": [
+        {
+          "alt": "",
+          "caption": "Lindsey Thiry reports on how the quick work of a San Francisco police officer and a surgeon helped 49ers rookie Ricky Pearsall survive a gunshot to the chest and return to the field.",
+          "height": 324,
+          "name": "How two heroes helped Ricky Pearsall return from a gunshot wound",
+          "url": "https://a.espncdn.com/media/motion/2024/1027/dm_241027_Ricky_Pearsall_NFLCD/dm_241027_Ricky_Pearsall_NFLCD.jpg",
+          "width": 576
+        }
+      ],
+      "lastModified": "2024-10-27T16:01:58Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://api-app.espn.com/v1/video/clips/42030867"
+          },
+          "self": {
+            "href": "http://api-app.espn.com/v1/video/clips/42030867"
+          }
+        },
+        "web": {
+          "href": "https://www.espn.com/video/clip?id=42030867"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T16:01:59Z",
+      "type": "Media"
+    },
+    {
+      "byline": "ESPN",
+      "categories": [
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "description": "Betting",
+          "id": 611584,
+          "league": {
+            "description": "Betting",
+            "id": 22000,
+            "links": {
+              "api": {
+                "leagues": {}
+              },
+              "mobile": {
+                "leagues": {}
+              },
+              "web": {
+                "leagues": {}
+              }
+            }
+          },
+          "leagueId": 22000,
+          "sportId": 22000,
+          "type": "league",
+          "uid": "s:22000"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "description": "news - sports betting",
+          "id": 137817,
+          "sportId": 0,
+          "topicId": 179,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "description": "San Francisco 49ers",
+          "id": 1637,
+          "sportId": 28,
+          "team": {
+            "description": "San Francisco 49ers",
+            "id": 25,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/25"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=25"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/sf/san-francisco-49ers"
+                }
+              }
+            }
+          },
+          "teamId": 25,
+          "type": "team",
+          "uid": "s:20~l:28~t:25"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "description": "Dallas Cowboys",
+          "id": 1298,
+          "sportId": 28,
+          "team": {
+            "description": "Dallas Cowboys",
+            "id": 6,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/6"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=6"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/dal/dallas-cowboys"
+                }
+              }
+            }
+          },
+          "teamId": 6,
+          "type": "team",
+          "uid": "s:20~l:28~t:6"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "guid": "b0fc8fb79dbee57490086f0ee7c6b234",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "guid": "b0fc8fb7-9dbe-e574-9008-6f0ee7c6b234",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "guid": "985a261f296cc95c32a5addc4df75001",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "guid": "985a261f-296c-c95c-32a5-addc4df75001",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "guid": "14f579db-79ec-a898-9405-8fec63e16063",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T14:30:00Z",
+          "guid": "14f579db79eca89894058fec63e16063",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "3b7a5c961669c",
+      "description": "Betting Sunday Night Football's Cowboys vs. 49ers Week 8 game? Here's what you need to know.",
+      "headline": "Betting tips for 'Sunday Night Football':  Cowboys at 49ers",
+      "images": [
+        {
+          "caption": "Brock Purdy and the San Francisco 49ers look to bounce back with a statement win in primetime over the Dallas Cowboys.",
+          "credit": "Photo by Ezra Shaw/Getty Images",
+          "dataSourceIdentifier": "e0dc4d0b6c8b4",
+          "height": 729,
+          "id": 42031225,
+          "name": "Brock Purdy [1296x729]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1027/r1406459_1296x729_16-9.jpg",
+          "width": 1296
+        },
+        {
+          "credit": "Photo by Cooper Neill/Getty Images",
+          "dataSourceIdentifier": "80013170e0ac9",
+          "height": 729,
+          "id": 42031161,
+          "name": "Dak Prescott [1296x729]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1027/r1406458_1296x729_16-9.jpg",
+          "width": 1296
+        }
+      ],
+      "lastModified": "2024-10-27T14:14:16Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/40631262"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/40631262"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/wireless/story?storyId=40631262"
+        },
+        "web": {
+          "href": "https://www.espn.com/espn/betting/story/_/id/40631262/dallas-cowboys-san-francisco-49ers-sunday-night-nfl-betting-odds-picks-lines"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T14:14:21Z",
+      "type": "Story"
+    },
+    {
+      "byline": "ESPN staff",
+      "categories": [
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "description": "NFL",
+          "id": 9572,
+          "league": {
+            "description": "NFL",
+            "id": 28,
+            "links": {
+              "api": {
+                "leagues": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl"
+                }
+              },
+              "mobile": {
+                "leagues": {
+                  "href": "http://m.espn.com/nfl/"
+                }
+              },
+              "web": {
+                "leagues": {
+                  "href": "https://www.espn.com/nfl/"
+                }
+              }
+            }
+          },
+          "leagueId": 28,
+          "sportId": 28,
+          "type": "league",
+          "uid": "s:20~l:28"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "description": "daily",
+          "id": 409222,
+          "sportId": 0,
+          "topicId": 779,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "description": "culture",
+          "id": 409220,
+          "sportId": 0,
+          "topicId": 777,
+          "type": "topic"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "description": "Kansas City Chiefs",
+          "id": 2496,
+          "sportId": 28,
+          "team": {
+            "description": "Kansas City Chiefs",
+            "id": 12,
+            "links": {
+              "api": {
+                "teams": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/teams/12"
+                }
+              },
+              "mobile": {
+                "teams": {
+                  "href": "http://m.espn.com/nfl/clubhouse?teamId=12"
+                }
+              },
+              "web": {
+                "teams": {
+                  "href": "https://www.espn.com/nfl/team/_/name/kc/kansas-city-chiefs"
+                }
+              }
+            }
+          },
+          "teamId": 12,
+          "type": "team",
+          "uid": "s:20~l:28~t:12"
+        },
+        {
+          "athlete": {
+            "description": "Mahomes, Patrick",
+            "id": 3139477,
+            "links": {
+              "api": {
+                "athletes": {
+                  "href": "http://now.core.api.espn.com/v1/sports/football/nfl/athletes/3139477"
+                }
+              },
+              "mobile": {
+                "athletes": {
+                  "href": "http://m.espn.com/nfl/playercard?playerId=3139477"
+                }
+              },
+              "web": {
+                "athletes": {
+                  "href": "https://www.espn.com/nfl/player/_/id/3139477/patrick-mahomes"
+                }
+              }
+            }
+          },
+          "athleteId": 3139477,
+          "createDate": "2024-10-27T12:30:00Z",
+          "description": "Mahomes, Patrick",
+          "id": 166867,
+          "sportId": 28,
+          "type": "athlete",
+          "uid": "s:20~l:28~a:3139477"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "98007ee4-395f-33a7-8db7-e5b1b940e721",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "37d87523280a9d4a0adb22cfc6d3619c",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "37d87523-280a-9d4a-0adb-22cfc6d3619c",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "f68f2343-8ceb-7a02-740d-af6338be21d2",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "f68f23438ceb7a02740daf6338be21d2",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "3ec1da6be74efda5be3a18190ec8aa5d",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "3ec1da6b-e74e-fda5-be3a-18190ec8aa5d",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "b66e959d-b64e-9bd6-7d5c-1bcb0d53c0cb",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "b66e959db64e9bd67d5c1bcb0d53c0cb",
+          "type": "guid"
+        },
+        {
+          "createDate": "2024-10-27T12:30:00Z",
+          "guid": "ad4c3bd2-ddb6-3f8c-8abf-744855a08fa4",
+          "type": "guid"
+        }
+      ],
+      "dataSourceIdentifier": "8a71e96f76cd1",
+      "description": "The Kansas City quarterback's record against the Las Vegas Raiders includes a 6-0 road record.",
+      "headline": "Patrick Mahomes looking to extend dominance against Raiders",
+      "images": [
+        {
+          "caption": "Kansas City Chiefs quarterback Patrick Mahomes has a dominant record against the Las Vegas Raiders.",
+          "credit": "(Photo by Ezra Shaw/Getty Images)",
+          "dataSourceIdentifier": "eaacffe582ce1",
+          "height": 342,
+          "id": 42003194,
+          "name": "patrick mahomes [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1025/r1405798_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "caption": "Tom Brady's final win against the Bills came while he was a member of the Buccaneers.",
+          "credit": "(Photo by Julio Aguilar/Getty Images)",
+          "dataSourceIdentifier": "af4a4ddc048a0",
+          "height": 342,
+          "id": 41574299,
+          "name": "tom brady [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1002/r1395208_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "caption": "Dak Prescott has won 13 straight games against the New York Giants.",
+          "credit": "(Photo by Sarah Stier/Getty Images)",
+          "dataSourceIdentifier": "8c625ca1c4f2a",
+          "height": 342,
+          "id": 41574244,
+          "name": "dak prescott [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1002/r1395206_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "caption": "Peyton Manning set the NFL record for touchdown passes in a season in a 2013 game against the Houston Texans.",
+          "credit": "(Photo by Scott Halleran/Getty Images)",
+          "dataSourceIdentifier": "9611a061cdb8f",
+          "height": 342,
+          "id": 41574185,
+          "name": "peyton manning [608x342]",
+          "type": "header",
+          "url": "https://a.espncdn.com/photo/2024/1002/r1395205_608x342_16-9.jpg",
+          "width": 608
+        },
+        {
+          "caption": "Stephen A. Smith says because of their assets, the Chiefs are a scarier team than the Ravens.",
+          "height": 324,
+          "name": "Stephen A. says the Chiefs are a scarier team than the Ravens",
+          "type": "Media",
+          "url": "https://a.espncdn.com/media/motion/2024/1025/dm_241025_Chiefs_are_a_scarier_team_than_the_Ravens/dm_241025_Chiefs_are_a_scarier_team_than_the_Ravens.jpg",
+          "width": 576
+        }
+      ],
+      "lastModified": "2024-10-27T12:19:05Z",
+      "links": {
+        "api": {
+          "news": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41574630"
+          },
+          "self": {
+            "href": "http://now.core.api.espn.com/v1/sports/news/41574630"
+          }
+        },
+        "mobile": {
+          "href": "http://m.espn.go.com/nfl/story?storyId=41574630"
+        },
+        "web": {
+          "href": "https://www.espn.com/nfl/story/_/id/41574630/nfl-quarterbacks-regular-season-dominance-single-opponent"
+        }
+      },
+      "premium": false,
+      "published": "2024-10-27T12:19:07Z",
+      "type": "Story"
+    }
+  ],
+  "header": "NFL News",
+  "link": {
+    "href": "https://www.espn.com/nfl/",
+    "isExternal": false,
+    "isPremium": false,
+    "language": "en",
+    "rel": [
+      "index",
+      "desktop",
+      "league"
+    ],
+    "shortText": "All News",
+    "text": "All NFL News"
+  }
+}

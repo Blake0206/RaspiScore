@@ -1,0 +1,1342 @@
+{
+  "events": [
+    {
+      "competitions": [
+        {
+          "attendance": 0,
+          "broadcast": "FOX",
+          "broadcasts": [
+            {
+              "market": "national",
+              "names": [
+                "FOX"
+              ]
+            }
+          ],
+          "competitors": [
+            {
+              "errors": 0,
+              "hits": 6,
+              "homeAway": "home",
+              "id": "19",
+              "leaders": [
+                {
+                  "abbreviation": "AVG",
+                  "displayName": "Batting Average",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Mookie Betts",
+                        "fullName": "Mookie Betts",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33039.png",
+                        "id": "33039",
+                        "jersey": "50",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/33039",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "SS"
+                        },
+                        "shortName": "M. Betts",
+                        "team": {
+                          "id": "19"
+                        }
+                      },
+                      "displayValue": "2-2, R",
+                      "team": {
+                        "id": "19"
+                      },
+                      "value": 1.0
+                    }
+                  ],
+                  "name": "avg",
+                  "shortDisplayName": "BA"
+                },
+                {
+                  "abbreviation": "HR",
+                  "displayName": "Home Runs",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Freddie Freeman",
+                        "fullName": "Freddie Freeman",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/30193.png",
+                        "id": "30193",
+                        "jersey": "5",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/30193",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "1B"
+                        },
+                        "shortName": "F. Freeman",
+                        "team": {
+                          "id": "19"
+                        }
+                      },
+                      "displayValue": "1-2, HR, RBI, R",
+                      "team": {
+                        "id": "19"
+                      },
+                      "value": 1.0
+                    }
+                  ],
+                  "name": "homeRuns",
+                  "shortDisplayName": "HR"
+                },
+                {
+                  "abbreviation": "RBI",
+                  "displayName": "Runs Batted In",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Teoscar Hernandez",
+                        "fullName": "Teoscar Hernandez",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33377.png",
+                        "id": "33377",
+                        "jersey": "37",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/33377",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "LF"
+                        },
+                        "shortName": "T. Hernandez",
+                        "team": {
+                          "id": "19"
+                        }
+                      },
+                      "displayValue": "1-2, HR, 2 RBI, R",
+                      "team": {
+                        "id": "19"
+                      },
+                      "value": 2.0
+                    }
+                  ],
+                  "name": "RBIs",
+                  "shortDisplayName": "RBI"
+                },
+                {
+                  "abbreviation": "RAT",
+                  "displayName": "MLB Rating",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Tommy Edman",
+                        "fullName": "Tommy Edman",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/39907.png",
+                        "id": "39907",
+                        "jersey": "25",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/39907",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "CF"
+                        },
+                        "shortName": "T. Edman",
+                        "team": {
+                          "id": "19"
+                        }
+                      },
+                      "displayValue": "2-2, HR, 2B, RBI, R, SB",
+                      "team": {
+                        "id": "19"
+                      },
+                      "value": 69.25
+                    }
+                  ],
+                  "name": "MLBRating",
+                  "shortDisplayName": "RAT"
+                },
+                {
+                  "abbreviation": "MLB",
+                  "displayName": "MLB Rating",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Tommy Edman",
+                        "fullName": "Tommy Edman",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/39907.png",
+                        "id": "39907",
+                        "jersey": "25",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/39907",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "CF"
+                        },
+                        "shortName": "T. Edman",
+                        "team": {
+                          "id": "19"
+                        }
+                      },
+                      "displayValue": "2-2, HR, 2B, RBI, R, SB",
+                      "team": {
+                        "id": "19"
+                      },
+                      "value": 69.25
+                    }
+                  ],
+                  "name": "MLBRating",
+                  "shortDisplayName": "MLB"
+                }
+              ],
+              "linescores": [
+                {
+                  "value": 0.0
+                },
+                {
+                  "value": 1.0
+                },
+                {
+                  "value": 3.0
+                }
+              ],
+              "order": 0,
+              "probables": [
+                {
+                  "abbreviation": "SP",
+                  "athlete": {
+                    "displayName": "Yoshinobu Yamamoto",
+                    "fullName": "Yoshinobu Yamamoto",
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/4872587.png",
+                    "id": "4872587",
+                    "jersey": "18",
+                    "links": [
+                      {
+                        "href": "https://www.espn.com/mlb/player/_/id/4872587",
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ]
+                      }
+                    ],
+                    "position": "SP",
+                    "shortName": "Y. Yamamoto",
+                    "team": {
+                      "id": "19"
+                    }
+                  },
+                  "displayName": "Probable Starting Pitcher",
+                  "name": "probableStartingPitcher",
+                  "playerId": 4872587,
+                  "record": "(5.11, 1-0)",
+                  "shortDisplayName": "Starter",
+                  "statistics": [
+                    {
+                      "abbreviation": "SV",
+                      "displayValue": "0",
+                      "name": "saves",
+                      "rankDisplayValue": "Tied-13th"
+                    },
+                    {
+                      "abbreviation": "L",
+                      "displayValue": "0",
+                      "name": "losses",
+                      "rankDisplayValue": "Tied-36th"
+                    },
+                    {
+                      "abbreviation": "W",
+                      "displayValue": "1",
+                      "name": "wins",
+                      "rankDisplayValue": "Tied-6th"
+                    },
+                    {
+                      "abbreviation": "ERA",
+                      "displayValue": "5.11",
+                      "name": "ERA",
+                      "rankDisplayValue": "32nd"
+                    },
+                    {
+                      "abbreviation": "E",
+                      "displayValue": "0",
+                      "name": "errors",
+                      "rankDisplayValue": "Tied-29th"
+                    }
+                  ]
+                }
+              ],
+              "records": [
+                {
+                  "abbreviation": "Total",
+                  "name": "overall",
+                  "summary": "98-64",
+                  "type": "total"
+                },
+                {
+                  "abbreviation": "Home",
+                  "name": "Home",
+                  "summary": "52-29",
+                  "type": "home"
+                },
+                {
+                  "abbreviation": "AWAY",
+                  "name": "Road",
+                  "summary": "46-35",
+                  "type": "road"
+                }
+              ],
+              "score": "4",
+              "statistics": [
+                {
+                  "abbreviation": "H",
+                  "displayValue": "6",
+                  "name": "hits"
+                },
+                {
+                  "abbreviation": "R",
+                  "displayValue": "4",
+                  "name": "runs"
+                },
+                {
+                  "abbreviation": "AVG",
+                  "displayValue": ".400",
+                  "name": "avg"
+                },
+                {
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "name": "saves"
+                },
+                {
+                  "abbreviation": "L",
+                  "displayValue": "0",
+                  "name": "losses"
+                },
+                {
+                  "abbreviation": "W",
+                  "displayValue": "0",
+                  "name": "wins"
+                },
+                {
+                  "abbreviation": "ERA",
+                  "displayValue": "2.45",
+                  "name": "ERA"
+                },
+                {
+                  "abbreviation": "E",
+                  "displayValue": "0",
+                  "name": "errors"
+                }
+              ],
+              "team": {
+                "abbreviation": "LAD",
+                "alternateColor": "ffffff",
+                "color": "005a9c",
+                "displayName": "Los Angeles Dodgers",
+                "id": "19",
+                "isActive": true,
+                "links": [
+                  {
+                    "href": "https://www.espn.com/mlb/team/_/name/lad/los-angeles-dodgers",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Clubhouse"
+                  },
+                  {
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/lad/los-angeles-dodgers",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Roster"
+                  },
+                  {
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/lad/los-angeles-dodgers",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Statistics"
+                  },
+                  {
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/lad",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Schedule"
+                  }
+                ],
+                "location": "Los Angeles",
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/lad.png",
+                "name": "Dodgers",
+                "shortDisplayName": "Dodgers",
+                "uid": "s:1~l:10~t:19"
+              },
+              "type": "team",
+              "uid": "s:1~l:10~t:19"
+            },
+            {
+              "errors": 0,
+              "hits": 1,
+              "homeAway": "away",
+              "id": "10",
+              "leaders": [
+                {
+                  "abbreviation": "AVG",
+                  "displayName": "Batting Average",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Juan Soto",
+                        "fullName": "Juan Soto",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/36969.png",
+                        "id": "36969",
+                        "jersey": "22",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/36969",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "shortName": "J. Soto",
+                        "team": {
+                          "id": "10"
+                        }
+                      },
+                      "displayValue": "1-2, HR, RBI, R",
+                      "team": {
+                        "id": "10"
+                      },
+                      "value": 0.5
+                    }
+                  ],
+                  "name": "avg",
+                  "shortDisplayName": "BA"
+                },
+                {
+                  "abbreviation": "HR",
+                  "displayName": "Home Runs",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Juan Soto",
+                        "fullName": "Juan Soto",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/36969.png",
+                        "id": "36969",
+                        "jersey": "22",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/36969",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "shortName": "J. Soto",
+                        "team": {
+                          "id": "10"
+                        }
+                      },
+                      "displayValue": "1-2, HR, RBI, R",
+                      "team": {
+                        "id": "10"
+                      },
+                      "value": 1.0
+                    }
+                  ],
+                  "name": "homeRuns",
+                  "shortDisplayName": "HR"
+                },
+                {
+                  "abbreviation": "RBI",
+                  "displayName": "Runs Batted In",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Juan Soto",
+                        "fullName": "Juan Soto",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/36969.png",
+                        "id": "36969",
+                        "jersey": "22",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/36969",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "shortName": "J. Soto",
+                        "team": {
+                          "id": "10"
+                        }
+                      },
+                      "displayValue": "1-2, HR, RBI, R",
+                      "team": {
+                        "id": "10"
+                      },
+                      "value": 1.0
+                    }
+                  ],
+                  "name": "RBIs",
+                  "shortDisplayName": "RBI"
+                },
+                {
+                  "abbreviation": "RAT",
+                  "displayName": "MLB Rating",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Juan Soto",
+                        "fullName": "Juan Soto",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/36969.png",
+                        "id": "36969",
+                        "jersey": "22",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/36969",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "shortName": "J. Soto",
+                        "team": {
+                          "id": "10"
+                        }
+                      },
+                      "displayValue": "1-2, HR, RBI, R",
+                      "team": {
+                        "id": "10"
+                      },
+                      "value": 65.75
+                    }
+                  ],
+                  "name": "MLBRating",
+                  "shortDisplayName": "RAT"
+                },
+                {
+                  "abbreviation": "MLB",
+                  "displayName": "MLB Rating",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Juan Soto",
+                        "fullName": "Juan Soto",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/36969.png",
+                        "id": "36969",
+                        "jersey": "22",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/36969",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "shortName": "J. Soto",
+                        "team": {
+                          "id": "10"
+                        }
+                      },
+                      "displayValue": "1-2, HR, RBI, R",
+                      "team": {
+                        "id": "10"
+                      },
+                      "value": 65.75
+                    }
+                  ],
+                  "name": "MLBRating",
+                  "shortDisplayName": "MLB"
+                },
+                {
+                  "abbreviation": "MLB",
+                  "displayName": "MLB Rating",
+                  "leaders": [
+                    {
+                      "athlete": {
+                        "active": true,
+                        "displayName": "Juan Soto",
+                        "fullName": "Juan Soto",
+                        "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/36969.png",
+                        "id": "36969",
+                        "jersey": "22",
+                        "links": [
+                          {
+                            "href": "https://www.espn.com/mlb/player/_/id/36969",
+                            "rel": [
+                              "playercard",
+                              "desktop",
+                              "athlete"
+                            ]
+                          }
+                        ],
+                        "position": {
+                          "abbreviation": "RF"
+                        },
+                        "shortName": "J. Soto",
+                        "team": {
+                          "id": "10"
+                        }
+                      },
+                      "displayValue": "1-2, HR, RBI, R",
+                      "team": {
+                        "id": "10"
+                      },
+                      "value": 65.75
+                    }
+                  ],
+                  "name": "MLBRating",
+                  "shortDisplayName": "MLB"
+                }
+              ],
+              "linescores": [
+                {
+                  "value": 0.0
+                },
+                {
+                  "value": 0.0
+                },
+                {
+                  "value": 1.0
+                },
+                {
+                  "value": 0.0
+                }
+              ],
+              "order": 1,
+              "probables": [
+                {
+                  "abbreviation": "SP",
+                  "athlete": {
+                    "displayName": "Carlos Rodon",
+                    "fullName": "Carlos Rodon",
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33696.png",
+                    "id": "33696",
+                    "jersey": "55",
+                    "links": [
+                      {
+                        "href": "https://www.espn.com/mlb/player/_/id/33696",
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ]
+                      }
+                    ],
+                    "position": "SP",
+                    "shortName": "C. Rodon",
+                    "team": {
+                      "id": "10"
+                    }
+                  },
+                  "displayName": "Probable Starting Pitcher",
+                  "name": "probableStartingPitcher",
+                  "playerId": 33696,
+                  "record": "(4.40, 1-1)",
+                  "shortDisplayName": "Starter",
+                  "statistics": [
+                    {
+                      "abbreviation": "SV",
+                      "displayValue": "0",
+                      "name": "saves",
+                      "rankDisplayValue": "Tied-13th"
+                    },
+                    {
+                      "abbreviation": "L",
+                      "displayValue": "1",
+                      "name": "losses",
+                      "rankDisplayValue": "Tied-5th"
+                    },
+                    {
+                      "abbreviation": "W",
+                      "displayValue": "1",
+                      "name": "wins",
+                      "rankDisplayValue": "Tied-6th"
+                    },
+                    {
+                      "abbreviation": "ERA",
+                      "displayValue": "4.40",
+                      "name": "ERA",
+                      "rankDisplayValue": "29th"
+                    },
+                    {
+                      "abbreviation": "E",
+                      "displayValue": "0",
+                      "name": "errors",
+                      "rankDisplayValue": "Tied-29th"
+                    }
+                  ]
+                }
+              ],
+              "records": [
+                {
+                  "abbreviation": "Total",
+                  "name": "overall",
+                  "summary": "94-68",
+                  "type": "total"
+                },
+                {
+                  "abbreviation": "Home",
+                  "name": "Home",
+                  "summary": "44-37",
+                  "type": "home"
+                },
+                {
+                  "abbreviation": "AWAY",
+                  "name": "Road",
+                  "summary": "50-31",
+                  "type": "road"
+                }
+              ],
+              "score": "1",
+              "statistics": [
+                {
+                  "abbreviation": "H",
+                  "displayValue": "1",
+                  "name": "hits"
+                },
+                {
+                  "abbreviation": "R",
+                  "displayValue": "1",
+                  "name": "runs"
+                },
+                {
+                  "abbreviation": "AVG",
+                  "displayValue": ".083",
+                  "name": "avg"
+                },
+                {
+                  "abbreviation": "SV",
+                  "displayValue": "0",
+                  "name": "saves"
+                },
+                {
+                  "abbreviation": "L",
+                  "displayValue": "0",
+                  "name": "losses"
+                },
+                {
+                  "abbreviation": "W",
+                  "displayValue": "0",
+                  "name": "wins"
+                },
+                {
+                  "abbreviation": "ERA",
+                  "displayValue": "12.00",
+                  "name": "ERA"
+                },
+                {
+                  "abbreviation": "E",
+                  "displayValue": "0",
+                  "name": "errors"
+                }
+              ],
+              "team": {
+                "abbreviation": "NYY",
+                "alternateColor": "c4ced4",
+                "color": "132448",
+                "displayName": "New York Yankees",
+                "id": "10",
+                "isActive": true,
+                "links": [
+                  {
+                    "href": "https://www.espn.com/mlb/team/_/name/nyy/new-york-yankees",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "clubhouse",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Clubhouse"
+                  },
+                  {
+                    "href": "https://www.espn.com/mlb/team/roster/_/name/nyy/new-york-yankees",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "roster",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Roster"
+                  },
+                  {
+                    "href": "https://www.espn.com/mlb/team/stats/_/name/nyy/new-york-yankees",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "stats",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Statistics"
+                  },
+                  {
+                    "href": "https://www.espn.com/mlb/team/schedule/_/name/nyy",
+                    "isExternal": false,
+                    "isPremium": false,
+                    "rel": [
+                      "schedule",
+                      "desktop",
+                      "team"
+                    ],
+                    "text": "Schedule"
+                  }
+                ],
+                "location": "New York",
+                "logo": "https://a.espncdn.com/i/teamlogos/mlb/500/scoreboard/nyy.png",
+                "name": "Yankees",
+                "shortDisplayName": "Yankees",
+                "uid": "s:1~l:10~t:10"
+              },
+              "type": "team",
+              "uid": "s:1~l:10~t:10"
+            }
+          ],
+          "conferenceCompetition": false,
+          "date": "2024-10-27T00:08Z",
+          "format": {
+            "regulation": {
+              "periods": 9
+            }
+          },
+          "geoBroadcasts": [
+            {
+              "lang": "en",
+              "market": {
+                "id": "1",
+                "type": "National"
+              },
+              "media": {
+                "shortName": "FOX"
+              },
+              "region": "us",
+              "type": {
+                "id": "1",
+                "shortName": "TV"
+              }
+            },
+            {
+              "lang": "en",
+              "market": {
+                "id": "1",
+                "type": "National"
+              },
+              "media": {
+                "shortName": "ERADM"
+              },
+              "region": "us",
+              "type": {
+                "id": "5",
+                "shortName": "Radio"
+              }
+            }
+          ],
+          "highlights": [],
+          "id": "401701039",
+          "leaders": [
+            {
+              "abbreviation": "RAT",
+              "displayName": "MLB Rating",
+              "leaders": [
+                {
+                  "athlete": {
+                    "active": true,
+                    "displayName": "Tommy Edman",
+                    "fullName": "Tommy Edman",
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/39907.png",
+                    "id": "39907",
+                    "jersey": "25",
+                    "links": [
+                      {
+                        "href": "https://www.espn.com/mlb/player/_/id/39907",
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ]
+                      }
+                    ],
+                    "position": {
+                      "abbreviation": "CF"
+                    },
+                    "shortName": "T. Edman",
+                    "team": {
+                      "id": "19"
+                    }
+                  },
+                  "displayValue": "2-2, HR, 2B, RBI, R, SB",
+                  "team": {
+                    "id": "19"
+                  },
+                  "value": 69.25
+                },
+                {
+                  "athlete": {
+                    "active": true,
+                    "displayName": "Teoscar Hernandez",
+                    "fullName": "Teoscar Hernandez",
+                    "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/33377.png",
+                    "id": "33377",
+                    "jersey": "37",
+                    "links": [
+                      {
+                        "href": "https://www.espn.com/mlb/player/_/id/33377",
+                        "rel": [
+                          "playercard",
+                          "desktop",
+                          "athlete"
+                        ]
+                      }
+                    ],
+                    "position": {
+                      "abbreviation": "LF"
+                    },
+                    "shortName": "T. Hernandez",
+                    "team": {
+                      "id": "19"
+                    }
+                  },
+                  "displayValue": "1-2, HR, 2 RBI, R",
+                  "team": {
+                    "id": "19"
+                  },
+                  "value": 66.75
+                }
+              ],
+              "name": "MLBRating",
+              "shortDisplayName": "RAT"
+            }
+          ],
+          "neutralSite": false,
+          "notes": [
+            {
+              "headline": "World Series - Game 2",
+              "type": "event"
+            }
+          ],
+          "outsText": "2 Outs",
+          "playByPlayAvailable": true,
+          "recent": true,
+          "series": {
+            "competitors": [
+              {
+                "href": "http://sports.core.api.espn.pvt/v2/sports/baseball/leagues/mlb/seasons/2024/teams/19?lang=en&region=us",
+                "id": "19",
+                "ties": 0,
+                "uid": "s:1~l:10~t:19",
+                "wins": 1
+              },
+              {
+                "href": "http://sports.core.api.espn.pvt/v2/sports/baseball/leagues/mlb/seasons/2024/teams/10?lang=en&region=us",
+                "id": "10",
+                "ties": 0,
+                "uid": "s:1~l:10~t:10",
+                "wins": 0
+              }
+            ],
+            "completed": false,
+            "summary": "LAD lead series 1-0",
+            "title": "Playoff Series",
+            "totalCompetitions": 7,
+            "type": "playoff"
+          },
+          "situation": {
+            "balls": 0,
+            "batter": {
+              "athlete": {
+                "displayName": "Anthony Rizzo",
+                "fullName": "Anthony Rizzo",
+                "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/30782.png",
+                "id": "30782",
+                "jersey": "48",
+                "links": [
+                  {
+                    "href": "https://www.espn.com/mlb/player/_/id/30782",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ]
+                  }
+                ],
+                "position": "1B",
+                "shortName": "A. Rizzo",
+                "team": {
+                  "id": "10"
+                }
+              },
+              "period": 4,
+              "playerId": 30782,
+              "summary": "0-0, BB"
+            },
+            "lastPlay": {
+              "atBatId": "4017010390603",
+              "athletesInvolved": [],
+              "id": "4017010390603020021",
+              "scoreValue": 0,
+              "summaryType": "P",
+              "team": {
+                "id": "19"
+              },
+              "text": "Pitch 1 : Strike 1 Foul",
+              "type": {
+                "abbreviation": "F",
+                "id": "21",
+                "text": "Foul Ball",
+                "type": "foul-ball"
+              }
+            },
+            "onFirst": false,
+            "onSecond": false,
+            "onThird": false,
+            "outs": 2,
+            "pitcher": {
+              "athlete": {
+                "displayName": "Yoshinobu Yamamoto",
+                "fullName": "Yoshinobu Yamamoto",
+                "headshot": "https://a.espncdn.com/i/headshots/mlb/players/full/4872587.png",
+                "id": "4872587",
+                "jersey": "18",
+                "links": [
+                  {
+                    "href": "https://www.espn.com/mlb/player/_/id/4872587",
+                    "rel": [
+                      "playercard",
+                      "desktop",
+                      "athlete"
+                    ]
+                  }
+                ],
+                "position": "SP",
+                "shortName": "Y. Yamamoto",
+                "team": {
+                  "id": "19"
+                }
+              },
+              "period": 4,
+              "playerId": 4872587,
+              "summary": "3.2 IP, ER, H, K, 2 BB"
+            },
+            "strikes": 1
+          },
+          "startDate": "2024-10-27T00:08Z",
+          "status": {
+            "clock": 0.0,
+            "displayClock": "0:00",
+            "period": 4,
+            "type": {
+              "completed": false,
+              "description": "In Progress",
+              "detail": "Top 4th",
+              "id": "2",
+              "name": "STATUS_IN_PROGRESS",
+              "shortDetail": "Top 4th",
+              "state": "in"
+            }
+          },
+          "timeValid": true,
+          "type": {
+            "abbreviation": "FINAL",
+            "id": "17"
+          },
+          "uid": "s:1~l:10~e:401701039~c:401701039",
+          "venue": {
+            "address": {
+              "city": "Los Angeles",
+              "state": "California"
+            },
+            "fullName": "Dodger Stadium",
+            "id": "19",
+            "indoor": false
+          },
+          "wasSuspended": false
+        }
+      ],
+      "date": "2024-10-27T00:08Z",
+      "id": "401701039",
+      "links": [
+        {
+          "href": "https://www.espn.com/mlb/game/_/gameId/401701039",
+          "isExternal": false,
+          "isPremium": false,
+          "language": "en-US",
+          "rel": [
+            "gamecast",
+            "desktop",
+            "event"
+          ],
+          "shortText": "Gamecast",
+          "text": "Gamecast"
+        },
+        {
+          "href": "https://www.espn.com/mlb/game/_/gameId/401701039",
+          "isExternal": false,
+          "isPremium": false,
+          "language": "en-US",
+          "rel": [
+            "live",
+            "desktop",
+            "event"
+          ],
+          "shortText": "Gamecast",
+          "text": "Gamecast"
+        },
+        {
+          "href": "https://www.espn.com/mlb/boxscore/_/gameId/401701039",
+          "isExternal": false,
+          "isPremium": false,
+          "language": "en-US",
+          "rel": [
+            "boxscore",
+            "desktop",
+            "event"
+          ],
+          "shortText": "Box Score",
+          "text": "Box Score"
+        },
+        {
+          "href": "https://www.espn.com/mlb/playbyplay/_/gameId/401701039",
+          "isExternal": false,
+          "isPremium": false,
+          "language": "en-US",
+          "rel": [
+            "pbp",
+            "desktop",
+            "event"
+          ],
+          "shortText": "Play-by-Play",
+          "text": "Play-by-Play"
+        }
+      ],
+      "name": "New York Yankees at Los Angeles Dodgers",
+      "season": {
+        "slug": "post-season",
+        "type": 3,
+        "year": 2024
+      },
+      "shortName": "NYY @ LAD",
+      "status": {
+        "clock": 0.0,
+        "displayClock": "0:00",
+        "period": 4,
+        "type": {
+          "completed": false,
+          "description": "In Progress",
+          "detail": "Top 4th",
+          "id": "2",
+          "name": "STATUS_IN_PROGRESS",
+          "shortDetail": "Top 4th",
+          "state": "in"
+        }
+      },
+      "uid": "s:1~l:10~e:401701039",
+      "weather": {
+        "conditionId": "2",
+        "displayValue": "Mostly sunny",
+        "highTemperature": 68,
+        "link": {
+          "href": "http://www.accuweather.com/en/us/dodger-stadium-ca/90012/current-weather/30524_poi?lang=en-us",
+          "isExternal": true,
+          "isPremium": false,
+          "language": "en-US",
+          "rel": [
+            "90090"
+          ],
+          "shortText": "Weather",
+          "text": "Weather"
+        },
+        "temperature": 68
+      }
+    }
+  ],
+  "leagues": [
+    {
+      "abbreviation": "MLB",
+      "calendar": [
+        "2024-02-15T08:00Z",
+        "2024-02-16T08:00Z",
+        "2024-02-17T08:00Z",
+        "2024-02-18T08:00Z",
+        "2024-02-19T08:00Z",
+        "2024-02-20T08:00Z",
+        "2024-02-21T08:00Z",
+        "2024-03-27T07:00Z",
+        "2024-07-15T07:00Z",
+        "2024-07-17T07:00Z",
+        "2024-07-18T07:00Z",
+        "2024-10-04T07:00Z",
+        "2024-10-21T07:00Z",
+        "2024-10-22T07:00Z",
+        "2024-10-23T07:00Z",
+        "2024-10-24T07:00Z",
+        "2024-10-27T07:00Z",
+        "2024-10-31T07:00Z",
+        "2024-11-03T07:00Z",
+        "2024-11-04T08:00Z",
+        "2024-11-05T08:00Z",
+        "2024-11-06T08:00Z",
+        "2024-11-07T08:00Z",
+        "2024-11-08T08:00Z",
+        "2024-11-09T08:00Z",
+        "2024-11-10T08:00Z",
+        "2024-11-11T08:00Z",
+        "2024-11-12T08:00Z",
+        "2024-11-13T08:00Z",
+        "2024-11-14T08:00Z",
+        "2024-11-15T08:00Z",
+        "2024-11-16T08:00Z",
+        "2024-11-17T08:00Z",
+        "2024-11-18T08:00Z",
+        "2024-11-19T08:00Z",
+        "2024-11-20T08:00Z",
+        "2024-11-21T08:00Z",
+        "2024-11-22T08:00Z",
+        "2024-11-23T08:00Z",
+        "2024-11-24T08:00Z",
+        "2024-11-25T08:00Z",
+        "2024-11-26T08:00Z",
+        "2024-11-27T08:00Z",
+        "2024-11-28T08:00Z",
+        "2024-11-29T08:00Z",
+        "2024-11-30T08:00Z",
+        "2024-12-01T08:00Z",
+        "2024-12-02T08:00Z",
+        "2024-12-03T08:00Z",
+        "2024-12-04T08:00Z",
+        "2024-12-05T08:00Z",
+        "2024-12-06T08:00Z",
+        "2024-12-07T08:00Z",
+        "2024-12-08T08:00Z",
+        "2024-12-09T08:00Z",
+        "2024-12-10T08:00Z"
+      ],
+      "calendarEndDate": "2024-12-11T07:59Z",
+      "calendarIsWhitelist": false,
+      "calendarStartDate": "2024-02-15T08:00Z",
+      "calendarType": "day",
+      "id": "10",
+      "logos": [
+        {
+          "alt": "",
+          "height": 500,
+          "href": "https://a.espncdn.com/i/teamlogos/leagues/500/mlb.png",
+          "lastUpdated": "2023-03-29T12:34Z",
+          "rel": [
+            "full",
+            "default"
+          ],
+          "width": 500
+        },
+        {
+          "alt": "",
+          "height": 500,
+          "href": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500-dark/mlb.png&w=500&h=500&transparent=true",
+          "lastUpdated": "2023-03-29T12:35Z",
+          "rel": [
+            "full",
+            "dark"
+          ],
+          "width": 500
+        }
+      ],
+      "midsizeName": "MLB",
+      "name": "Major League Baseball",
+      "season": {
+        "displayName": "2024",
+        "endDate": "2024-12-11T07:59Z",
+        "startDate": "2024-02-15T08:00Z",
+        "type": {
+          "abbreviation": "post",
+          "id": "3",
+          "name": "Postseason",
+          "type": 3
+        },
+        "year": 2024
+      },
+      "slug": "mlb",
+      "uid": "s:1~l:10"
+    }
+  ]
+}
