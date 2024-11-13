@@ -1,5 +1,5 @@
 # Displays scores from ESPN onto an led matrix
-Currently everything is being ran on an emulator using [RGBMatrixEmulator](https://github.com/ty-porter/RGBMatrixEmulator#customization) \
+Currently everything is being ran on an emulator using [RGBMatrixEmulator](https://github.com/ty-porter/RGBMatrixEmulator) \
 Information is gathered from ESPN using the [espn_scraper](https://github.com/andr3w321/espn_scraper)
 
 
