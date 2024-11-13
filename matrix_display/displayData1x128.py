@@ -1,19 +1,9 @@
 import time
-from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions, graphics
+from RGBMatrixEmulator import graphics
 from PIL import Image, ImageEnhance
 import urllib.request
 
-def setup_matrix():
-    options = RGBMatrixOptions()
-    options.rows = 64
-    options.cols = 128
-    options.chain_length = 1
-    options.parallel = 1
-    options.brightness = 75
-    options.hardware_mapping = 'regular'
-    return RGBMatrix(options=options)
-
-def display_event(matrix, event):
+def display_event(event, matrix):
     #broadcasts = event["broadcasts"]
     short_detail = event["short detail"]
     #show_outs = event["show outs"]
@@ -94,12 +84,10 @@ def display_event(matrix, event):
     offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
 
-def main(events_data):
-    matrix = setup_matrix()
-
+def main(events_data, matrix):
     try:
         for event in events_data:
-            display_event(matrix, event)
+            display_event(event, matrix)
             time.sleep(3) # default to 5
     except KeyboardInterrupt:
         print("Display interrupted")

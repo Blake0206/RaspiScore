@@ -1,19 +1,8 @@
 import time
-from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions, graphics
+from RGBMatrixEmulator import graphics
 from PIL import Image, ImageEnhance
-import urllib.request
 
-def setup_matrix():
-    options = RGBMatrixOptions()
-    options.rows = 64
-    options.cols = 128
-    options.chain_length = 1
-    options.parallel = 1
-    options.brightness = 75
-    options.hardware_mapping = 'regular'
-    return RGBMatrix(options=options)
-
-def display_headline(matrix, headline):
+def display_headline(headline, matrix):
     title = headline[0]
     teams = headline[1]
 
@@ -33,19 +22,17 @@ def display_headline(matrix, headline):
 
 
     def split_text_by_words(text, n=18):
-        words = title.split()  # Split by spaces into words
+        words = title.split()
         result = []
         current_line = ""
         
         for word in words:
-            # If adding the next word exceeds the desired length, save the current line and start a new one
             if len(current_line) + len(word) + 1 > n:
-                result.append(current_line.strip())  # Remove any extra spaces
+                result.append(current_line.strip())
                 current_line = word
             else:
                 current_line += " " + word
         
-        # Add the last line if it's not empty
         if current_line:
             result.append(current_line.strip())
         
@@ -73,12 +60,10 @@ def display_headline(matrix, headline):
     offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
 
-def main(headlines_data):
-    matrix = setup_matrix()
-
+def main(headlines_data, matrix):
     try:
         for headline in headlines_data:
-            display_headline(matrix, headline)
+            display_headline(headline, matrix)
             time.sleep(3) # default to 5
     except KeyboardInterrupt:
         print("Display interrupted")
