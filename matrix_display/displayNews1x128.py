@@ -8,7 +8,7 @@ def display_headline(headline, matrix):
 
     offscreen_canvas = matrix.CreateFrameCanvas()
     font = graphics.Font()
-    font.LoadFont("./matrix_display/7x13.bdf")
+    font.LoadFont("./matrix_display/fonts/7x13.bdf")
 
     white_color = graphics.Color(255, 255, 255)
     black_color = graphics.Color(0, 0, 0)

@@ -1,4 +1,4 @@
-import news_sources.foxnews as foxnews, news_sources.espnnews as espnnews, matrix_display.displayLeague1x128 as displayLeague1x128, matrix_display.displayData1x128 as displayData1x128, matrix_display.displayNews1x128 as displayNews1x128, sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as ncaaf, sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
+import news.foxnews as foxnews, news.espnnews as espnnews, matrix_display.displayLeague1x128 as displayLeague1x128, matrix_display.displayData1x128 as displayData1x128, matrix_display.displayNews1x128 as displayNews1x128, sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as ncaaf, sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
 from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions
 
 def setup_matrix():

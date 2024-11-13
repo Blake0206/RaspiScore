@@ -25,7 +25,7 @@ def display_event(event, matrix):
 
     offscreen_canvas = matrix.CreateFrameCanvas()
     font = graphics.Font()
-    font.LoadFont("./matrix_display/ic16x16u.bdf")
+    font.LoadFont("./matrix_display/fonts/ic16x16u.bdf")
 
     white_color = graphics.Color(255, 255, 255)
     black_color = graphics.Color(0, 0, 0)
