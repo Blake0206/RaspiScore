@@ -1,4 +1,4 @@
-import news.foxnews as foxnews, news.espnnews as espnnews, matrix_display.displayLeague1x128 as displayLeague1x128, matrix_display.displayData1x128 as displayData1x128, matrix_display.displayNews1x128 as displayNews1x128, sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as ncaaf, sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
+import news.foxnews as foxnews, news.espnnews as espnnews, matrix_display.displayLeague1x128 as displayLeague1x128, matrix_display.displayEvents1x128 as displayEvents1x128, matrix_display.displayNews1x128 as displayNews1x128, sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as ncaaf, sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
 from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions
 
 def setup_matrix():
@@ -72,20 +72,23 @@ def run_app(league, news_source, matrix):
     #    print('-'*30)
 
     displayLeague1x128.main(league, matrix)
-    displayData1x128.main(events_data, matrix)
+    displayEvents1x128.main(events_data, matrix)
     displayNews1x128.main(headlines_data, matrix)
 
 
 if __name__ == "__main__":
     matrix = setup_matrix()
 
-    #leagues = ['mlb', 'nba', 'nfl', 'ncaaf', 'ncaam', 'ncaaw', 'wnba', 'nhl']
+    # 'mlb', 'nba', 'nfl', 'ncaaf', 'ncaam', 'ncaaw', 'wnba', 'nhl'
     leagues = ['nba', 'nfl']
+
+    # 'espn', 'fox'
+    news = 'espn'
     
     try:
         while True:
             for league in leagues:
-                run_app(league, 'espn', matrix)
+                run_app(league, news, matrix)
     except KeyboardInterrupt:
         # Ctrl+C to quit
         print("Quitting program...")
