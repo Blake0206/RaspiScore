@@ -1,5 +1,12 @@
 import news.foxnews as foxnews, news.espnnews as espnnews, matrix_display.displayLeague1x128 as displayLeague1x128, matrix_display.displayEvents1x128 as displayEvents1x128, matrix_display.displayNews1x128 as displayNews1x128, sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as ncaaf, sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
 from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions
+import json
+
+# Load configuration from main_config.json
+def load_config(config_file='main_config.json'):
+    with open(config_file, 'r') as file:
+        config = json.load(file)
+    return config
 
 def setup_matrix():
     options = RGBMatrixOptions()
@@ -54,6 +61,8 @@ def run_app(league, news_source, matrix):
             espn_sport = 'nhl'
             fox_sport = 'nhl'
             events_data = nhl.getData()
+        case _:
+            print("Error with 'leagues' specified in main_config.json")
 
     if news_source == 'espn':
         headlines_data = espnnews.main(category, espn_sport)
@@ -71,19 +80,26 @@ def run_app(league, news_source, matrix):
     #        print(str(k) + ": " + str(v) + " " + str(type(v)).removeprefix('<class ').removesuffix('>'))
     #    print('-'*30)
 
+    first_display = config["first_display"]
+    print(first_display)
     displayLeague1x128.main(league, matrix)
-    displayEvents1x128.main(events_data, matrix)
-    displayNews1x128.main(headlines_data, matrix)
+    if first_display == 'leagues':
+        displayEvents1x128.main(events_data, matrix)
+        displayNews1x128.main(headlines_data, matrix)
+    elif first_display == 'news':
+        displayNews1x128.main(headlines_data, matrix)
+        displayEvents1x128.main(events_data, matrix)
+    else:
+        print("Error with 'first_display' specified in main_config.json")
+    
 
 
 if __name__ == "__main__":
+    config = load_config()
     matrix = setup_matrix()
 
-    # 'mlb', 'nba', 'nfl', 'ncaaf', 'ncaam', 'ncaaw', 'wnba', 'nhl'
-    leagues = ['nba', 'nfl']
-
-    # 'espn', 'fox'
-    news = 'espn'
+    leagues = config['leagues']
+    news = config['news']
     
     try:
         while True:

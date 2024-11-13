@@ -1,0 +1,5 @@
+{
+    "leagues": ["nba", "nfl"],
+    "news": "espn",
+    "first_display": "leagues"
+}

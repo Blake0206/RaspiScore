@@ -3,3 +3,6 @@
 
 # DS Store files generated on mac
 .DS_Store
+
+# File created while displaying a team's logo
+team_logo.png
