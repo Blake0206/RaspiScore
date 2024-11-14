@@ -18,7 +18,7 @@ def setup_matrix():
     options.hardware_mapping = 'regular'
     return RGBMatrix(options=options)
 
-def run_app(league, news_source, matrix):
+def run_app(league, news_source, matrix, config):
 
     match league: 
         case 'mlb':
@@ -81,14 +81,14 @@ def run_app(league, news_source, matrix):
     #    print('-'*30)
 
     first_display = config["first_display"]
-    print(first_display)
-    displayLeague1x128.main(league, matrix)
+    displayLeague1x128.main(league, matrix, config)
+
     if first_display == 'leagues':
-        displayEvents1x128.main(events_data, matrix)
-        displayNews1x128.main(headlines_data, matrix)
+        displayEvents1x128.main(events_data, matrix, config)
+        displayNews1x128.main(headlines_data, matrix, config)
     elif first_display == 'news':
-        displayNews1x128.main(headlines_data, matrix)
-        displayEvents1x128.main(events_data, matrix)
+        displayNews1x128.main(headlines_data, matrix, config)
+        displayEvents1x128.main(events_data, matrix, config)
     else:
         print("Error with 'first_display' specified in main_config.json")
     
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     try:
         while True:
             for league in leagues:
-                run_app(league, news, matrix)
+                run_app(league, news, matrix, config)
     except KeyboardInterrupt:
         # Ctrl+C to quit
         print("Quitting program...")

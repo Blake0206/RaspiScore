@@ -2,7 +2,7 @@ import time
 from RGBMatrixEmulator import graphics
 from PIL import Image, ImageEnhance
 
-def display_headline(headline, matrix):
+def display_headline(headline, matrix, config):
     title = headline[0]
     teams = headline[1]
 
@@ -60,10 +60,10 @@ def display_headline(headline, matrix):
     offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
 
-def main(headlines_data, matrix):
+def main(headlines_data, matrix, config):
     try:
         for headline in headlines_data:
-            display_headline(headline, matrix)
+            display_headline(headline, matrix, config)
             time.sleep(3) # default to 5
     except KeyboardInterrupt:
         print("Display interrupted")

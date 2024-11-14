@@ -1,18 +1,22 @@
+import json
 
+# Load configuration from main_config.json
+def load_config(config_file='main_config.json'):
+    with open(config_file, 'r') as file:
+        config = json.load(file)
+    return config
 
-def main(short_detail):
+def main(short_detail, config=load_config()):
     _strings = short_detail.split(":")
     strings = _strings[0].split("- ")
 
-    strings[1] = int(strings[1]) - 2  # 3 for PST --- 2 for MST
+    strings[1] = int(strings[1]) + config["time_correction"]
     if strings[1] <= 0:
         strings[1] = 12 + strings[1]
         if strings[1] != 12:
             _strings[1] = _strings[1].replace("PM", "AM")
 
     _strings[1] = _strings[1].replace("EST", "")
-
-    #fixed_time = (f"{strings[0]}- {strings[1]}:{_strings[1]}")
     fixed_time = f"{strings[1]}:{_strings[1]}"
     
     return fixed_time

@@ -1,5 +1,10 @@
 {
+    "time_correction": -2,
     "leagues": ["nba", "nfl"],
     "news": "espn",
-    "first_display": "leagues"
+    "first_display": "leagues",
+    "league_logo_size": 100,
+    "team_logo_size": 90,
+    "team_logo_offset": 30,
+    "score_offset": 10
 }

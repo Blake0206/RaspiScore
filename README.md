@@ -3,7 +3,7 @@ Currently everything is being ran on an emulator using [RGBMatrixEmulator](https
 Information is gathered from ESPN using the [espn_scraper](https://github.com/andr3w321/espn_scraper)
 
 
-## Installation
+## Install
 Run `pip install -r requirements.txt` to install the required packages
 
 
@@ -18,9 +18,14 @@ Any errors will be displayed in the terminal
 ### RaspiScore
 *Configuration is done within `main_config.json`*
 
+`time_correction` - hour difference from EST, positive and negative integers are accepted \
 `leagues` - sports leagues that are displayed, accepted strings of "mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl" \
 `news` - source of news data, accepted string of "espn" or "fox" \
-`first_display` - first information that is displayed, accepted string of "leagues" or "news"
+`first_display` - first information that is displayed, accepted string of "leagues" or "news" \
+`league_logo_size` - size in pixels of the league logo displayed before events/news, positive integers are accepted \
+`team_logo_size` - size in pixels of the team logo displayed for events, positive integers are accepted \
+`team_logo_offset` - negative offset in pixels from the left/right edges for the team logos, positive and negative integers are accepted \
+`score_offset` - offset in pixels from the left/right edges for the scores, positive integers are accepted
 
 ### RGBMatrixEmulator
 *Configuration is done within `emulator_config.json`* \
