@@ -15,7 +15,6 @@ Any errors will be displayed in the terminal
 
 ## Configuration
 
-### RaspiScore
 *Configuration is done within `main_config.json`*
 
 `time_correction` - hour difference from EST, positive and negative integers are accepted \
@@ -25,6 +24,7 @@ Any errors will be displayed in the terminal
 `league_logo_size` - size in pixels of the league logo displayed before events/news, positive integers are accepted \
 `team_logo_size` - size in pixels of the team logo displayed for events, positive integers are accepted \
 `team_logo_offset` - negative offset in pixels from the left/right edges for the team logos, positive and negative integers are accepted \
+`team_logo_mirrored` - mirrors the logo on the right if set to true, boolean values are accepted \
 `score_offset` - offset in pixels from the left/right edges for the scores, positive integers are accepted
 
 ### RGBMatrixEmulator

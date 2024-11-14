@@ -1,6 +1,6 @@
 import time
 from RGBMatrixEmulator import graphics
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance, ImageOps
 import urllib.request
 
 def display_event(event, matrix, config):
@@ -39,9 +39,20 @@ def display_event(event, matrix, config):
         logo_url = event["logo" + str(i)]
         logo = urllib.request.urlretrieve(logo_url, "team_logo.png")
         logo = Image.open("team_logo.png")
+
+        # Changes Utah Jazz logo from black to yellow
+        if logo_url == 'http://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png':
+            pixels = logo.load()
+            yellow_color = (255, 255, 0, 255)
+            for y in range(logo.height):
+                for x in range(logo.width):
+                    r, g, b, a = pixels[x, y]
+                    if (r, g, b) == (0, 0, 0) and a > 0:
+                        pixels[x, y] = yellow_color
         logo = ImageEnhance.Brightness(logo).enhance(0.6)
-        #if i == 2:
-        #    logo = ImageOps.mirror(logo)
+
+        if i == 2 and config["team_logo_mirrored"]:
+            logo = ImageOps.mirror(logo)
 
         logo.thumbnail((config["team_logo_size"], config["team_logo_size"]), Image.Resampling.BOX)
 

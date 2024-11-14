@@ -39,6 +39,10 @@ def display_headline(headline, matrix, config):
         return result
     
     new_title = split_text_by_words(title)
+    
+    if len(new_title) > 6:
+        new_title.pop()
+        new_title[5] += '...'
 
     line_count = 0
     for line in new_title:

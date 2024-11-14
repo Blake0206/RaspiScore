@@ -1,12 +1,69 @@
-import news.foxnews as foxnews, news.espnnews as espnnews, matrix_display.displayLeague1x128 as displayLeague1x128, matrix_display.displayEvents1x128 as displayEvents1x128, matrix_display.displayNews1x128 as displayNews1x128, sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as ncaaf, sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
+import news.foxnews as foxnews, news.espnnews as espnnews
+import matrix_display.displayLeague1x128 as displayLeague1x128
+import matrix_display.displayEvents1x128 as displayEvents1x128
+import matrix_display.displayNews1x128 as displayNews1x128
+import sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as ncaaf
+import sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
 from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions
 import json
 
-# Load configuration from main_config.json
-def load_config(config_file='main_config.json'):
-    with open(config_file, 'r') as file:
-        config = json.load(file)
-    return config
+class ConfigError(Exception):
+    # Custom exception for configuration errors
+    pass
+
+class ConfigLoader:
+    VALID_LEAGUES = {"mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl"}
+    VALID_NEWS_SOURCES = {"espn", "fox"}
+    VALID_FIRST_DISPLAY = {"leagues", "news"}
+
+    def __init__(self, config_file):
+        with open(config_file, "r") as f:
+            self.config = json.load(f)
+        self.validate_config()
+
+    def validate_config(self):
+        # Validate time_correction
+        if not isinstance(self.config.get("time_correction"), int):
+            raise ConfigError("time_correction must be an integer")
+
+        # Validate leagues
+        leagues = self.config.get("leagues", [])
+        if not isinstance(leagues, list) or not all(league in self.VALID_LEAGUES for league in leagues):
+            raise ConfigError(f"leagues must be a list containing only of {self.VALID_LEAGUES}.")
+
+        # Validate news
+        news = self.config.get("news")
+        if news not in self.VALID_NEWS_SOURCES:
+            raise ConfigError(f"news must be one of {self.VALID_NEWS_SOURCES}")
+
+        # Validate first_display
+        first_display = self.config.get("first_display")
+        if first_display not in self.VALID_FIRST_DISPLAY:
+            raise ConfigError(f"first_display must be one of {self.VALID_FIRST_DISPLAY}")
+
+        # Validate league_logo_size
+        league_logo_size = self.config.get("league_logo_size")
+        if not isinstance(league_logo_size, int) or league_logo_size <= 0:
+            raise ConfigError("league_logo_size must be a positive intege.")
+
+        # Validate team_logo_size
+        team_logo_size = self.config.get("team_logo_size")
+        if not isinstance(team_logo_size, int) or team_logo_size <= 0:
+            raise ConfigError("team_logo_size must be a positive integer")
+
+        # Validate team_logo_offset
+        team_logo_offset = self.config.get("team_logo_offset")
+        if not isinstance(team_logo_offset, int):
+            raise ConfigError("team_logo_offset must be an integer")
+        
+        # Validate team_logo_mirrored
+        if not isinstance(self.config.get("team_logo_mirrored"), bool):
+            raise ConfigError("team_logo_mirrored must be a boolean")
+
+        # Validate score_offset
+        score_offset = self.config.get("score_offset")
+        if not isinstance(score_offset, int) or score_offset <= 0:
+            raise ConfigError("score_offset must be a positive integer")
 
 def setup_matrix():
     options = RGBMatrixOptions()
@@ -63,6 +120,7 @@ def run_app(league, news_source, matrix, config):
             events_data = nhl.getData()
         case _:
             print("Error with 'leagues' specified in main_config.json")
+            return
 
     if news_source == 'espn':
         headlines_data = espnnews.main(category, espn_sport)
@@ -73,12 +131,6 @@ def run_app(league, news_source, matrix, config):
         print(article[0])
         print("/".join(article[1]))
         print('-'*80)
-
-    
-    #for event_data in events_data:
-    #    for k, v in event_data.items():
-    #        print(str(k) + ": " + str(v) + " " + str(type(v)).removeprefix('<class ').removesuffix('>'))
-    #    print('-'*30)
 
     first_display = config["first_display"]
     displayLeague1x128.main(league, matrix, config)
@@ -91,21 +143,20 @@ def run_app(league, news_source, matrix, config):
         displayEvents1x128.main(events_data, matrix, config)
     else:
         print("Error with 'first_display' specified in main_config.json")
-    
-
 
 if __name__ == "__main__":
-    config = load_config()
-    matrix = setup_matrix()
-
-    leagues = config['leagues']
-    news = config['news']
-    
     try:
+        config_loader = ConfigLoader("main_config.json")
+        config = config_loader.config
+        matrix = setup_matrix()
+
+        leagues = config['leagues']
+        news = config['news']
+        
         while True:
             for league in leagues:
                 run_app(league, news, matrix, config)
+    except ConfigError as e:
+        print(f"Configuration Error: {e}")
     except KeyboardInterrupt:
-        # Ctrl+C to quit
         print("Quitting program...")
-    

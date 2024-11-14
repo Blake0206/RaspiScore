@@ -1,5 +1,5 @@
 import time
-from PIL import Image, ImageEnhance
+from PIL import Image
 
 def display_league(league, matrix, config):
 

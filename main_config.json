@@ -6,5 +6,6 @@
     "league_logo_size": 100,
     "team_logo_size": 90,
     "team_logo_offset": 30,
+    "team_logo_mirrored": false,
     "score_offset": 10
 }
