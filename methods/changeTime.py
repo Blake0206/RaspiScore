@@ -1,7 +1,7 @@
 import json
 
 # Load configuration from main_config.json
-def load_config(config_file='main_config.json'):
+def load_config(config_file='./config/main_config.json'):
     with open(config_file, 'r') as file:
         config = json.load(file)
     return config

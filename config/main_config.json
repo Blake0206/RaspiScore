@@ -13,7 +13,8 @@
     },
     "news": {
         "source": "espn",
-        "news_display_time": 5
+        "news_display_time": 5,
+        "display_source_logo": false
     },
     "other": {
         "first_display": "leagues",

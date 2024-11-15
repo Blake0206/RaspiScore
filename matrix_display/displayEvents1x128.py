@@ -37,8 +37,8 @@ def display_event(event, matrix, config):
     while (i < 2):
         i += 1
         logo_url = event["logo" + str(i)]
-        logo = urllib.request.urlretrieve(logo_url, "team_logo.png")
-        logo = Image.open("team_logo.png")
+        logo = urllib.request.urlretrieve(logo_url, "./media/team_logo.png")
+        logo = Image.open("./media/team_logo.png")
 
         # Changes Utah Jazz logo from black to yellow
         if logo_url == 'http://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png':
