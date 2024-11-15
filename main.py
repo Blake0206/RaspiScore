@@ -22,63 +22,55 @@ class ConfigLoader:
         self.validate_config()
 
     def validate_config(self):
-        # Validate time_correction
-        if not isinstance(self.config.get("time_correction"), int):
-            raise ConfigError("time_correction must be an integer")
+        leagues = self.config.get("leagues", {})
+        events = self.config.get("events", {})
+        news = self.config.get("news", {})
+        other = self.config.get("other", {})
 
         # Validate leagues
-        leagues = self.config.get("leagues", [])
-        if not isinstance(leagues, list) or not all(league in self.VALID_LEAGUES for league in leagues):
-            raise ConfigError(f"leagues must be a list containing only of {self.VALID_LEAGUES}.")
+        displayed_leagues = leagues.get("displayed_leagues", [])
+        if not isinstance(displayed_leagues, list) or not all(l in self.VALID_LEAGUES for l in displayed_leagues):
+            raise ConfigError(f"displayed_leagues must be a list containing only {self.VALID_LEAGUES}.")
+        
+        if not isinstance(leagues.get("league_display_time"), int) or leagues["league_display_time"] <= 0:
+            raise ConfigError("league_display_time must be a positive integer.")
+        
+        if not isinstance(leagues.get("league_logo_size"), int) or leagues["league_logo_size"] <= 0:
+            raise ConfigError("league_logo_size must be a positive integer.")
+
+
+        # Validate events
+        if not isinstance(events.get("event_display_time"), int) or events["event_display_time"] <= 0:
+            raise ConfigError("event_display_time must be a positive integer.")
+        
+        if not isinstance(events.get("team_logo_size"), int) or events["team_logo_size"] <= 0:
+            raise ConfigError("team_logo_size must be a positive integer.")
+        
+        if not isinstance(events.get("team_logo_offset"), int):
+            raise ConfigError("team_logo_offset must be an integer.")
+        
+        if not isinstance(events.get("team_logo_mirrored"), bool):
+            raise ConfigError("team_logo_mirrored must be a boolean.")
+        
+        if not isinstance(events.get("score_offset"), int) or events["score_offset"] <= 0:
+            raise ConfigError("score_offset must be a positive integer.")
+        
 
         # Validate news
-        news = self.config.get("news")
-        if news not in self.VALID_NEWS_SOURCES:
-            raise ConfigError(f"news must be one of {self.VALID_NEWS_SOURCES}")
-
-        # Validate first_display
-        first_display = self.config.get("first_display")
-        if first_display not in self.VALID_FIRST_DISPLAY:
-            raise ConfigError(f"first_display must be one of {self.VALID_FIRST_DISPLAY}")
+        if news.get("source") not in self.VALID_NEWS_SOURCES:
+            raise ConfigError(f"news.source must be one of {self.VALID_NEWS_SOURCES}.")
         
-        # Validate league_display_time
-        league_display_time = self.config.get("league_display_time")
-        if not isinstance(league_display_time, int) or league_display_time <= 0:
-            raise ConfigError("league_display_time must be a positive integer")
+        if not isinstance(news.get("news_display_time"), int) or news["news_display_time"] <= 0:
+            raise ConfigError("news_display_time must be a positive integer.")
+
+
+        # Validate other settings
+        if not isinstance(other.get("time_correction"), int):
+            raise ConfigError("time_correction must be an integer.")
         
-        # Validate event_display_time
-        event_display_time = self.config.get("event_display_time")
-        if not isinstance(event_display_time, int) or event_display_time <= 0:
-            raise ConfigError("event_display_time must be a positive integer")
-        
-        # Validate news_display_time
-        news_display_time = self.config.get("news_display_time")
-        if not isinstance(news_display_time, int) or news_display_time <= 0:
-            raise ConfigError("news_display_time must be a positive integer")
+        if other.get("first_display") not in self.VALID_FIRST_DISPLAY:
+            raise ConfigError(f"first_display must be one of {self.VALID_FIRST_DISPLAY}.")
 
-        # Validate league_logo_size
-        league_logo_size = self.config.get("league_logo_size")
-        if not isinstance(league_logo_size, int) or league_logo_size <= 0:
-            raise ConfigError("league_logo_size must be a positive intege.")
-
-        # Validate team_logo_size
-        team_logo_size = self.config.get("team_logo_size")
-        if not isinstance(team_logo_size, int) or team_logo_size <= 0:
-            raise ConfigError("team_logo_size must be a positive integer")
-
-        # Validate team_logo_offset
-        team_logo_offset = self.config.get("team_logo_offset")
-        if not isinstance(team_logo_offset, int):
-            raise ConfigError("team_logo_offset must be an integer")
-        
-        # Validate team_logo_mirrored
-        if not isinstance(self.config.get("team_logo_mirrored"), bool):
-            raise ConfigError("team_logo_mirrored must be a boolean")
-
-        # Validate score_offset
-        score_offset = self.config.get("score_offset")
-        if not isinstance(score_offset, int) or score_offset <= 0:
-            raise ConfigError("score_offset must be a positive integer")
 
 def setup_matrix():
     options = RGBMatrixOptions()
@@ -147,7 +139,7 @@ def run_app(league, news_source, matrix, config):
         print("/".join(article[1]))
         print('-'*80)
 
-    first_display = config["first_display"]
+    first_display = config['other']['first_display']
     displayLeague1x128.main(league, matrix, config)
 
     if first_display == 'leagues':
@@ -165,8 +157,8 @@ if __name__ == "__main__":
         config = config_loader.config
         matrix = setup_matrix()
 
-        leagues = config['leagues']
-        news = config['news']
+        leagues = config['leagues']['displayed_leagues']
+        news = config['news']['source']
         
         while True:
             for league in leagues:

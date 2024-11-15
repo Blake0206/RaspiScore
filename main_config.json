@@ -1,14 +1,22 @@
 {
-    "time_correction": -2,
-    "leagues": ["nba", "nfl"],
-    "news": "espn",
-    "first_display": "leagues",
-    "league_display_time": 3,
-    "event_display_time": 3,
-    "news_display_time": 5,
-    "league_logo_size": 100,
-    "team_logo_size": 90,
-    "team_logo_offset": 30,
-    "team_logo_mirrored": false,
-    "score_offset": 10
+    "leagues": {
+        "displayed_leagues": ["nba", "nfl"],
+        "league_display_time": 3,
+        "league_logo_size": 100
+    },
+    "events": {
+        "event_display_time": 3,
+        "team_logo_size": 90,
+        "team_logo_offset": 30,
+        "team_logo_mirrored": false,
+        "score_offset": 10
+    },
+    "news": {
+        "source": "espn",
+        "news_display_time": 5
+    },
+    "other": {
+        "first_display": "leagues",
+        "time_correction": -2
+    }
 }

@@ -10,7 +10,7 @@ def main(short_detail, config=load_config()):
     _strings = short_detail.split(":")
     strings = _strings[0].split("- ")
 
-    strings[1] = int(strings[1]) + config["time_correction"]
+    strings[1] = int(strings[1]) + config["other"]["time_correction"]
     if strings[1] <= 0:
         strings[1] = 12 + strings[1]
         if strings[1] != 12:

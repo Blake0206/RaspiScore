@@ -8,7 +8,7 @@ def display_league(league, matrix, config):
 
     logo_file = str("./media/" + str(league) + ".png")
     logo = Image.open(logo_file).convert('RGBA')
-    logo.thumbnail((config["league_logo_size"], config["league_logo_size"]), Image.Resampling.BOX)
+    logo.thumbnail((config["leagues"]["league_logo_size"], config["leagues"]["league_logo_size"]), Image.Resampling.BOX)
     matrix.SetImage(logo.convert('RGB'), int(matrix.options.cols/2) - int(logo.width/2), int(matrix.options.rows/2) - int(logo.height/2))
 
     # Send the buffer to the matrix
@@ -18,7 +18,7 @@ def display_league(league, matrix, config):
 def main(league, matrix, config):
     try:
         display_league(league, matrix, config)
-        time.sleep(config["league_display_time"])
+        time.sleep(config["leagues"]["league_display_time"])
     except KeyboardInterrupt:
         print("Display interrupted")
     finally:

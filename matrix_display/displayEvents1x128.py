@@ -51,15 +51,15 @@ def display_event(event, matrix, config):
                         pixels[x, y] = yellow_color
         logo = ImageEnhance.Brightness(logo).enhance(0.6)
 
-        if i == 2 and config["team_logo_mirrored"]:
+        if i == 2 and config["events"]["team_logo_mirrored"]:
             logo = ImageOps.mirror(logo)
 
-        logo.thumbnail((config["team_logo_size"], config["team_logo_size"]), Image.Resampling.BOX)
+        logo.thumbnail((config["events"]["team_logo_size"], config["events"]["team_logo_size"]), Image.Resampling.BOX)
 
         if i == 1:
-            matrix.SetImage(logo.convert('RGB'), -config["team_logo_offset"], int(matrix.options.rows/2) - int(logo.height/2))
+            matrix.SetImage(logo.convert('RGB'), -config["events"]["team_logo_offset"], int(matrix.options.rows/2) - int(logo.height/2))
         else:
-            matrix.SetImage(logo.convert('RGB'), 128 - config["team_logo_size"] + config["team_logo_offset"], int(matrix.options.rows/2) - int(logo.height/2))
+            matrix.SetImage(logo.convert('RGB'), 128 - config["events"]["team_logo_size"] + config["events"]["team_logo_offset"], int(matrix.options.rows/2) - int(logo.height/2))
 
     if len(short_detail) > 12:
         short_detail = event["start time"]
@@ -73,17 +73,17 @@ def display_event(event, matrix, config):
         graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) +1,  36-1, black_color, time_detail)
         graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)),  36, white_color, time_detail)
 
-        graphics.DrawText(offscreen_canvas, font, config["score_offset"] - 1,  60-1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["score_offset"] + 1,  60+1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["score_offset"] - 1,  60+1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["score_offset"] + 1,  60-1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["score_offset"],  60, white_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] - 1,  60-1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] + 1,  60+1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] - 1,  60+1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] + 1,  60-1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"],  60, white_color, home_team_score)
 
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) - 1,  60-1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) + 1,  60+1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) - 1,  60+1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) + 1,  60-1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width),  60, white_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) - 1,  60-1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) + 1,  60+1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) - 1,  60+1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) + 1,  60-1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width),  60, white_color, away_team_score)
 
     if (short_detail.find("End of ")) != -1:
         short_detail = short_detail[:-2]
@@ -102,7 +102,7 @@ def main(events_data, matrix, config):
     try:
         for event in events_data:
             display_event(event, matrix, config)
-            time.sleep(config["event_display_time"])
+            time.sleep(config["events"]["event_display_time"])
     except KeyboardInterrupt:
         print("Display interrupted")
     finally:
