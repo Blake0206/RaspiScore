@@ -18,6 +18,8 @@
     },
     "other": {
         "first_display": "news",
-        "time_correction": -2
+        "time_correction": -2,
+        "text_color": [255, 255, 255],
+        "outline_color": [0, 0, 0]
     }
 }

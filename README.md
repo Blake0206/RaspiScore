@@ -19,7 +19,7 @@ By default, the emulator will run on [http://localhost:8888](http://localhost:88
 *Configuration is done within `main_config.json`*
 
 ### Leagues
-`leagues` - sports leagues that are displayed, accepted strings of "mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl" \
+`leagues` - sports leagues that are displayed, accepts list containing "mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl" \
 `league_display_time` - time in seconds that the league logo is displayed, positive integers are accepted \
 `league_logo_size` - size in pixels of the league logo displayed before events/news, positive integers are accepted
 
@@ -27,16 +27,19 @@ By default, the emulator will run on [http://localhost:8888](http://localhost:88
 `event_display_time` - time in seconds that each event is display, positive integers are accepted \
 `team_logo_size` - size in pixels of the team logo displayed for events, positive integers are accepted \
 `team_logo_offset` - negative offset in pixels from the left/right edges for the team logos, positive and negative integers are accepted \
-`team_logo_mirrored` - mirrors the logo on the right if set to true, boolean values are accepted \
+`team_logo_mirrored` - mirrors the logo on the right if set to true, booleans are accepted \
 `score_offset` - offset in pixels from the left/right edges for the scores, positive integers are accepted
 
 ### News
 `news` - source of news data, accepted string of "espn" or "fox" \
 `news_display_time` - time in seconds that each news headline is displayed, positive integers are accepted
+`display_source_logo` - enables/disables the news source's logo displayed behind text, booleans are accepted
 
 ### Other
 `first_display` - first information that is displayed, accepted string of "leagues" or "news" \
-`time_correction` - hour difference from EST, positive and negative integers are accepted 
+`time_correction` - hour difference from EST, positive and negative integers are accepted \
+`text_color` - color of the text, list of RGB values \
+`outline_color` - color of the text outline, list of RGB values
 
 
 ## RGBMatrixEmulator Configuration
