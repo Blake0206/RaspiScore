@@ -4,17 +4,17 @@ Information is gathered from ESPN using the [espn_scraper](https://github.com/an
 
 
 ## Install
-Run `pip install -r requirements.txt` to install the required packages
+Clone the repository using `git clone https://github.com/Blake0206/RaspiScore.git` \
+From the `RaspiScore` folder, run `pip install -r requirements.txt` to install the required packages
 
 
 ## Run
-From the root directory, run the main program by using `python3 main.py` \
+Run the main program by using `python3 main.py` \
 By default, the emulator will run on [http://localhost:8888](http://localhost:8888) \
-Any errors will be displayed in the terminal
+*Any errors and additional information will be displayed in the terminal*
 
 
 ## Configuration
-
 *Configuration is done within `main_config.json`*
 
 `time_correction` - hour difference from EST, positive and negative integers are accepted \

@@ -43,7 +43,7 @@ def display_event(event, matrix, config):
         # Changes Utah Jazz logo from black to yellow
         if logo_url == 'http://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png':
             pixels = logo.load()
-            yellow_color = (255, 255, 0, 255)
+            yellow_color = (255, 242, 31, 255)
             for y in range(logo.height):
                 for x in range(logo.width):
                     r, g, b, a = pixels[x, y]
@@ -73,6 +73,18 @@ def display_event(event, matrix, config):
         graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) +1,  36-1, black_color, time_detail)
         graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)),  36, white_color, time_detail)
 
+        graphics.DrawText(offscreen_canvas, font, config["score_offset"] - 1,  60-1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["score_offset"] + 1,  60+1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["score_offset"] - 1,  60+1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["score_offset"] + 1,  60-1, black_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["score_offset"],  60, white_color, home_team_score)
+
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) - 1,  60-1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) + 1,  60+1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) - 1,  60+1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) + 1,  60-1, black_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width),  60, white_color, away_team_score)
+
     if (short_detail.find("End of ")) != -1:
         short_detail = short_detail[:-2]
         
@@ -82,17 +94,7 @@ def display_event(event, matrix, config):
     graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) + 1,  20-1, black_color, short_detail)
     graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)),  20, white_color, short_detail)
 
-    graphics.DrawText(offscreen_canvas, font, config["score_offset"] - 1,  60-1, black_color, home_team_score)
-    graphics.DrawText(offscreen_canvas, font, config["score_offset"] + 1,  60+1, black_color, home_team_score)
-    graphics.DrawText(offscreen_canvas, font, config["score_offset"] - 1,  60+1, black_color, home_team_score)
-    graphics.DrawText(offscreen_canvas, font, config["score_offset"] + 1,  60-1, black_color, home_team_score)
-    graphics.DrawText(offscreen_canvas, font, config["score_offset"],  60, white_color, home_team_score)
-
-    graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) - 1,  60-1, black_color, away_team_score)
-    graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) + 1,  60+1, black_color, away_team_score)
-    graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) - 1,  60+1, black_color, away_team_score)
-    graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width) + 1,  60-1, black_color, away_team_score)
-    graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["score_offset"] - (len(away_team_score)*font_width),  60, white_color, away_team_score)
+    
     
     # Send the buffer to the matrix
     offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
