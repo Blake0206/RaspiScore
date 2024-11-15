@@ -3,8 +3,12 @@ from RGBMatrixEmulator import graphics
 from PIL import Image, ImageEnhance
 
 def display_headline(headline, matrix, config):
-    title = headline[0]
-    teams = headline[1]
+
+    if config["news"]["source"] == 'espn':
+        title = headline[0]
+        teams = headline[1]
+    else:
+        title = headline
 
     offscreen_canvas = matrix.CreateFrameCanvas()
     font = graphics.Font()
@@ -15,10 +19,11 @@ def display_headline(headline, matrix, config):
 
     offscreen_canvas.Clear()
 
-    logo = Image.open("./media/espn_logo.png")
-    logo = ImageEnhance.Brightness(logo).enhance(0.6)
-    logo.thumbnail((150, 64), Image.Resampling.BOX)
-    matrix.SetImage(logo.convert('RGB'), -7, 0)
+    if config["news"]["display_source_logo"]:
+        logo = Image.open("./media/" + str(config["news"]["source"]) + "_logo.png")
+        logo = ImageEnhance.Brightness(logo).enhance(0.6)
+        logo.thumbnail((150, 64), Image.Resampling.BOX)
+        matrix.SetImage(logo.convert('RGB'), int(matrix.options.cols/2) - int(logo.width/2), int(matrix.options.rows/2) - int(logo.height/2))
 
 
     def split_text_by_words(text, n=18):

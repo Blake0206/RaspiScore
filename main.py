@@ -66,8 +66,11 @@ def run_app(league, news_source, matrix, config):
         headlines_data = foxnews.main(fox_sport) 
 
     for article in headlines_data:
-        print(article[0])
-        print("/".join(article[1]))
+        if config["news"]["source"] == 'espn':
+            print(article[0])
+            print("/".join(article[1]))
+        else:
+            print(article)
         print('-'*80)
 
     first_display = config['other']['first_display']

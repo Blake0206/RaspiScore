@@ -14,10 +14,10 @@
     "news": {
         "source": "espn",
         "news_display_time": 5,
-        "display_source_logo": false
+        "display_source_logo": true
     },
     "other": {
-        "first_display": "leagues",
+        "first_display": "news",
         "time_correction": -2
     }
 }

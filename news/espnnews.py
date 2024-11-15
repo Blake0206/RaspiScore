@@ -1,8 +1,4 @@
 import espn_scraper as espn
-import json
-import urllib.request
-from PIL import Image
-import requests
 
 def main(category, sport):
     data = espn.get_new_json("https://site.api.espn.com/apis/site/v2/sports/" + category + "/" + sport + "/news?limit=10")
