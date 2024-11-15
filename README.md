@@ -21,6 +21,9 @@ By default, the emulator will run on [http://localhost:8888](http://localhost:88
 `leagues` - sports leagues that are displayed, accepted strings of "mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl" \
 `news` - source of news data, accepted string of "espn" or "fox" \
 `first_display` - first information that is displayed, accepted string of "leagues" or "news" \
+`league_display_time` - time in seconds that the league logo is displayed, positive integers are accepted \
+`event_display_time` - time in seconds that each event is display, positive integers are accepted \
+`news_display_time` - time in seconds that each news headline is displayed, positive integers are accepted \
 `league_logo_size` - size in pixels of the league logo displayed before events/news, positive integers are accepted \
 `team_logo_size` - size in pixels of the team logo displayed for events, positive integers are accepted \
 `team_logo_offset` - negative offset in pixels from the left/right edges for the team logos, positive and negative integers are accepted \

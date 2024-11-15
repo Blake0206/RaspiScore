@@ -18,7 +18,7 @@ def display_league(league, matrix, config):
 def main(league, matrix, config):
     try:
         display_league(league, matrix, config)
-        time.sleep(3) # default to 5
+        time.sleep(config["league_display_time"])
     except KeyboardInterrupt:
         print("Display interrupted")
     finally:

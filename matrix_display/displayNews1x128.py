@@ -68,7 +68,7 @@ def main(headlines_data, matrix, config):
     try:
         for headline in headlines_data:
             display_headline(headline, matrix, config)
-            time.sleep(3) # default to 5
+            time.sleep(config["news_display_time"])
     except KeyboardInterrupt:
         print("Display interrupted")
     finally:

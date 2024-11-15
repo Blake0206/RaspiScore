@@ -26,7 +26,7 @@ def display_event(event, matrix, config):
     offscreen_canvas = matrix.CreateFrameCanvas()
     font = graphics.Font()
     font.LoadFont("./matrix_display/fonts/ic16x16u.bdf")
-    font_width = 13
+    font_width = 12
 
     white_color = graphics.Color(255, 255, 255)
     black_color = graphics.Color(0, 0, 0)
@@ -94,8 +94,6 @@ def display_event(event, matrix, config):
     graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) + 1,  20-1, black_color, short_detail)
     graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)),  20, white_color, short_detail)
 
-    
-    
     # Send the buffer to the matrix
     offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
 
@@ -104,7 +102,7 @@ def main(events_data, matrix, config):
     try:
         for event in events_data:
             display_event(event, matrix, config)
-            time.sleep(3) # default to 5
+            time.sleep(config["event_display_time"])
     except KeyboardInterrupt:
         print("Display interrupted")
     finally:

@@ -40,6 +40,21 @@ class ConfigLoader:
         first_display = self.config.get("first_display")
         if first_display not in self.VALID_FIRST_DISPLAY:
             raise ConfigError(f"first_display must be one of {self.VALID_FIRST_DISPLAY}")
+        
+        # Validate league_display_time
+        league_display_time = self.config.get("league_display_time")
+        if not isinstance(league_display_time, int) or league_display_time <= 0:
+            raise ConfigError("league_display_time must be a positive integer")
+        
+        # Validate event_display_time
+        event_display_time = self.config.get("event_display_time")
+        if not isinstance(event_display_time, int) or event_display_time <= 0:
+            raise ConfigError("event_display_time must be a positive integer")
+        
+        # Validate news_display_time
+        news_display_time = self.config.get("news_display_time")
+        if not isinstance(news_display_time, int) or news_display_time <= 0:
+            raise ConfigError("news_display_time must be a positive integer")
 
         # Validate league_logo_size
         league_logo_size = self.config.get("league_logo_size")
