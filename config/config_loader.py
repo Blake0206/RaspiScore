@@ -33,6 +33,9 @@ class ConfigLoader:
 
 
         # Validate events
+        if not isinstance(events.get("display_events"), bool):
+            raise ConfigError("display_events must be a boolean")
+        
         if not isinstance(events.get("event_display_time"), int) or events["event_display_time"] <= 0:
             raise ConfigError("event_display_time must be a positive integer")
         
@@ -53,6 +56,9 @@ class ConfigLoader:
         
 
         # Validate news
+        if not isinstance(news.get("display_news"), bool):
+            raise ConfigError("display_news must be a boolean")
+        
         if news.get("source") not in self.VALID_NEWS_SOURCES:
             raise ConfigError(f"news.source must be one of {self.VALID_NEWS_SOURCES}.")
         

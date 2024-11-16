@@ -73,15 +73,17 @@ def run_app(league, news_source, matrix, config):
             print(article)
         print('-'*80)
 
-    first_display = config['other']['first_display']
     displayLeague1x128.main(league, matrix, config)
+    first_display = config['other']['first_display']
 
     if first_display == 'events':
         displayEvents1x128.main(events_data, matrix, config)
-        displayNews1x128.main(headlines_data, matrix, config)
+        if config['news']['display_news']:
+            displayNews1x128.main(headlines_data, matrix, config)
     elif first_display == 'news':
         displayNews1x128.main(headlines_data, matrix, config)
-        displayEvents1x128.main(events_data, matrix, config)
+        if config['events']['display_events']:
+            displayEvents1x128.main(events_data, matrix, config)
 
 
 if __name__ == "__main__":

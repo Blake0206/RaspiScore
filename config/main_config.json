@@ -5,6 +5,7 @@
         "league_logo_size": 100
     },
     "events": {
+        "display_events": true,
         "event_display_time": 3,
         "team_logo_size": 90,
         "team_logo_offset": 30,
@@ -13,6 +14,7 @@
         "score_offset": 10
     },
     "news": {
+        "display_news": true,
         "source": "espn",
         "news_display_time": 5,
         "display_source_logo": true,
