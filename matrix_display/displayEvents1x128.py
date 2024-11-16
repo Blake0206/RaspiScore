@@ -28,8 +28,11 @@ def display_event(event, matrix, config):
     font.LoadFont("./matrix_display/fonts/ic16x16u.bdf")
     font_width = 12
 
-    white_color = graphics.Color(255, 255, 255)
-    black_color = graphics.Color(0, 0, 0)
+    r, g, b = config["other"]["text_color"]
+    text_color = graphics.Color(r, g, b)
+
+    r, g, b = config["other"]["outline_color"]
+    outline_color = graphics.Color(r, g, b)
 
     offscreen_canvas.Clear()
 
@@ -39,16 +42,44 @@ def display_event(event, matrix, config):
         logo_url = event["logo" + str(i)]
         logo = urllib.request.urlretrieve(logo_url, "./media/events/team_logo.png")
         logo = Image.open("./media/events/team_logo.png")
+        pixels = logo.load()
 
         # Changes Utah Jazz logo from black to yellow
         if logo_url == 'http://a.espncdn.com/i/teamlogos/nba/500/scoreboard/utah.png':
-            pixels = logo.load()
             yellow_color = (255, 242, 31, 255)
             for y in range(logo.height):
                 for x in range(logo.width):
                     r, g, b, a = pixels[x, y]
                     if (r, g, b) == (0, 0, 0) and a > 0:
                         pixels[x, y] = yellow_color
+
+        # Check if any neighboring pixel is transparent
+        def has_transparent_neighbor(x, y, width, height, pixels):
+            neighbors = [
+                (x-1, y),  # left
+                (x+1, y),  # right
+                (x, y-1),  # up
+                (x, y+1),  # down
+            ]
+            
+            for nx, ny in neighbors:
+                if 0 <= nx < width and 0 <= ny < height:
+                    r, g, b, a = pixels[nx, ny]
+                    if a == 0:
+                        return True
+            return False
+
+        white_color = (255, 255, 255, 255)
+
+        for y in range(logo.height):
+            for x in range(logo.width):
+                r, g, b, a = pixels[x, y]
+ 
+                if (r, g, b) == (0, 0, 0) and a > 0:
+                    # Only change if it has a transparent neighbor
+                    if has_transparent_neighbor(x, y, logo.width, logo.height, pixels):
+                        pixels[x, y] = white_color  # Change black pixel to white
+
         logo = ImageEnhance.Brightness(logo).enhance(config["events"]["team_logo_opacity"])
 
         if i == 2 and config["events"]["team_logo_mirrored"]:
@@ -69,31 +100,31 @@ def display_event(event, matrix, config):
             time_detail = short_detail.split(" - ")[0]
             short_detail = short_detail.split(" - ")[1]
 
-            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) -1,  36-1, black_color, time_detail)
-            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) +1,  36+1, black_color, time_detail)
-            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) -1,  36+1, black_color, time_detail)
-            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) +1,  36-1, black_color, time_detail)
-            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)),  36, white_color, time_detail)
+            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) -1,  36-1, outline_color, time_detail)
+            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) +1,  36+1, outline_color, time_detail)
+            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) -1,  36+1, outline_color, time_detail)
+            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)) +1,  36-1, outline_color, time_detail)
+            graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(time_detail)*font_width)/2)),  36, text_color, time_detail)
         elif (short_detail.find("End of ")) != -1:
             short_detail = short_detail[:-2]
 
-        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] - 1,  60-1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] + 1,  60+1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] - 1,  60+1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] + 1,  60-1, black_color, home_team_score)
-        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"],  60, white_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] - 1,  60-1, outline_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] + 1,  60+1, outline_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] - 1,  60+1, outline_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"] + 1,  60-1, outline_color, home_team_score)
+        graphics.DrawText(offscreen_canvas, font, config["events"]["score_offset"],  60, text_color, home_team_score)
 
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) - 1,  60-1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) + 1,  60+1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) - 1,  60+1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) + 1,  60-1, black_color, away_team_score)
-        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width),  60, white_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) - 1,  60-1, outline_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) + 1,  60+1, outline_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) - 1,  60+1, outline_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width) + 1,  60-1, outline_color, away_team_score)
+        graphics.DrawText(offscreen_canvas, font, matrix.options.cols - config["events"]["score_offset"] - (len(away_team_score)*font_width),  60, text_color, away_team_score)
     
-    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) - 1,  20-1, black_color, short_detail)
-    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) + 1,  20+1, black_color, short_detail)
-    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) - 1,  20+1, black_color, short_detail)
-    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) + 1,  20-1, black_color, short_detail)
-    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)),  20, white_color, short_detail)
+    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) - 1,  20-1, outline_color, short_detail)
+    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) + 1,  20+1, outline_color, short_detail)
+    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) - 1,  20+1, outline_color, short_detail)
+    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)) + 1,  20-1, outline_color, short_detail)
+    graphics.DrawText(offscreen_canvas, font, (int(matrix.options.cols/2) - ((len(short_detail)*font_width)/2)),  20, text_color, short_detail)
 
     # Send the buffer to the matrix
     offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)
