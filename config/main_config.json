@@ -18,7 +18,8 @@
         "source": "espn",
         "news_display_time": 5,
         "display_source_logo": true,
-        "source_logo_opacity": 0.4
+        "source_logo_opacity": 0.4,
+        "line_spacing": 10
     },
     "other": {
         "first_display": "events",

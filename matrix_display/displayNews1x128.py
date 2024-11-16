@@ -56,17 +56,18 @@ def display_headline(headline, matrix, config):
     for line in new_title:
         line_count += 1
         height = len(new_title) * 13
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) -1, ((64-height)/2 + (10*line_count) + 6) - 1, outline_color, line)
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) +1, ((64-height)/2 + (10*line_count) + 6) + 1, outline_color, line)
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) -1, ((64-height)/2 + (10*line_count) + 6) + 1, outline_color, line)
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) +1, ((64-height)/2 + (10*line_count) + 6) - 1, outline_color, line)
+        line_spacing = config["news"]["line_spacing"]
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) -1, ((64-height)/2 + (line_spacing*line_count) + 6) - 1, outline_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) +1, ((64-height)/2 + (line_spacing*line_count) + 6) + 1, outline_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) -1, ((64-height)/2 + (line_spacing*line_count) + 6) + 1, outline_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) +1, ((64-height)/2 + (line_spacing*line_count) + 6) - 1, outline_color, line)
 
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) -1, ((64-height)/2 + (10*line_count) + 6), outline_color, line)
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) +1, ((64-height)/2 + (10*line_count) + 6), outline_color, line)
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)), ((64-height)/2 + (10*line_count) + 6) + 1, outline_color, line)
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)), ((64-height)/2 + (10*line_count) + 6) - 1, outline_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) -1, ((64-height)/2 + (line_spacing*line_count) + 6), outline_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)) +1, ((64-height)/2 + (line_spacing*line_count) + 6), outline_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)), ((64-height)/2 + (line_spacing*line_count) + 6) + 1, outline_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)), ((64-height)/2 + (line_spacing*line_count) + 6) - 1, outline_color, line)
 
-        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)), (64-height)/2 + (10*line_count) + 6, text_color, line)
+        graphics.DrawText(offscreen_canvas, font, (64 - ((len(line)*7)/2)), (64-height)/2 + (line_spacing*line_count) + 6, text_color, line)
     
     # Send the buffer to the matrix
     offscreen_canvas = matrix.SwapOnVSync(offscreen_canvas)

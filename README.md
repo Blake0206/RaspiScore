@@ -16,7 +16,7 @@ By default, the emulator will run on [http://localhost:8888](http://localhost:88
 
 
 ## Main Configuration
-*Configuration is done within `main_config.json`*
+*Configuration is done within `config/main_config.json`*
 
 ### Leagues
 `displayed_leagues` - sports leagues that are displayed, accepts list containing "mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl" \
@@ -37,7 +37,8 @@ By default, the emulator will run on [http://localhost:8888](http://localhost:88
 `source` - source of news data, accepted string of "espn" or "fox" \
 `news_display_time` - time in seconds that each news headline is displayed, positive integers are accepted \
 `display_source_logo` - shows/hides the news source logo displayed behind text, booleans are accepted \
-`source_logo_opacity` - opacity of the news source logo, positive floats less than 5 are accepted
+`source_logo_opacity` - opacity of the news source logo, positive floats less than 5 are accepted \
+`line_spacing` - spacing between text lines, positive integers above 10 are accepted
 
 ### Other
 `first_display` - first information that is displayed, accepted string of "leagues" or "news" \
