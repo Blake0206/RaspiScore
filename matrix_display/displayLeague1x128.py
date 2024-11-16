@@ -6,7 +6,7 @@ def display_league(league, matrix, config):
     offscreen_canvas = matrix.CreateFrameCanvas()
     offscreen_canvas.Clear()
 
-    logo_file = str("./media/" + str(league) + ".png")
+    logo_file = str("./media/leagues/" + str(league) + ".png")
     logo = Image.open(logo_file).convert('RGBA')
     logo.thumbnail((config["leagues"]["league_logo_size"], config["leagues"]["league_logo_size"]), Image.Resampling.BOX)
     matrix.SetImage(logo.convert('RGB'), int(matrix.options.cols/2) - int(logo.width/2), int(matrix.options.rows/2) - int(logo.height/2))

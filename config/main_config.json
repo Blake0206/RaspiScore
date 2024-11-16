@@ -1,6 +1,6 @@
 {
     "leagues": {
-        "displayed_leagues": ["nba", "nfl"],
+        "displayed_leagues": ["ncaaf", "nhl", "nba"],
         "league_display_time": 3,
         "league_logo_size": 100
     },
@@ -9,15 +9,17 @@
         "team_logo_size": 90,
         "team_logo_offset": 30,
         "team_logo_mirrored": false,
+        "team_logo_opacity": 0.6,
         "score_offset": 10
     },
     "news": {
         "source": "espn",
         "news_display_time": 5,
-        "display_source_logo": true
+        "display_source_logo": true,
+        "source_logo_opacity": 0.4
     },
     "other": {
-        "first_display": "news",
+        "first_display": "events",
         "time_correction": -2,
         "text_color": [255, 255, 255],
         "outline_color": [0, 0, 0]

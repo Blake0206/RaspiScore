@@ -23,8 +23,8 @@ def display_headline(headline, matrix, config):
     offscreen_canvas.Clear()
 
     if config["news"]["display_source_logo"]:
-        logo = Image.open("./media/" + str(config["news"]["source"]) + "_logo.png")
-        logo = ImageEnhance.Brightness(logo).enhance(0.6)
+        logo = Image.open("./media/news/" + str(config["news"]["source"]) + "_logo.png")
+        logo = ImageEnhance.Brightness(logo).enhance(config["news"]["source_logo_opacity"])
         logo.thumbnail((150, 64), Image.Resampling.BOX)
         matrix.SetImage(logo.convert('RGB'), int(matrix.options.cols/2) - int(logo.width/2), int(matrix.options.rows/2) - int(logo.height/2))
 

@@ -7,7 +7,7 @@ class ConfigError(Exception):
 class ConfigLoader:
     VALID_LEAGUES = {"mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl"}
     VALID_NEWS_SOURCES = {"espn", "fox"}
-    VALID_FIRST_DISPLAY = {"leagues", "news"}
+    VALID_FIRST_DISPLAY = {"events", "news"}
 
     def __init__(self, config_file):
         with open(config_file, "r") as f:
@@ -45,7 +45,10 @@ class ConfigLoader:
         if not isinstance(events.get("team_logo_mirrored"), bool):
             raise ConfigError("team_logo_mirrored must be a boolean")
         
-        if not isinstance(events.get("score_offset"), int) or events["score_offset"] <= 0:
+        if not isinstance(events.get("team_logo_opacity"), float) or events["team_logo_opacity"] < 0 or events["team_logo_opacity"] > 5:
+            raise ConfigError("team_logo_opacity must be a positive float")
+        
+        if not isinstance(events.get("score_offset"), int) or events["score_offset"] < 0:
             raise ConfigError("score_offset must be a positive integer")
         
 
@@ -58,6 +61,9 @@ class ConfigLoader:
         
         if not isinstance(news.get("display_source_logo"), bool):
             raise ConfigError("display_source_logo must be a boolean")
+        
+        if not isinstance(news.get("source_logo_opacity"), float) or news["source_logo_opacity"] < 0 or news["source_logo_opacity"] > 5:
+            raise ConfigError("source_logo_opacity must be a positive float")
 
 
         # Validate other settings
