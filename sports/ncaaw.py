@@ -5,12 +5,15 @@ import methods.changeTime as changeTime
 import methods.getLogo as getLogo
 
 
-def getData():
+def getData(conferenceID):
     events_data = []
     urls = espn.get_current_scoreboard_urls(league='ncw')
 
     for scoreboard_url in urls:
-        data = espn.get_url(scoreboard_url)
+        if conferenceID != 0:
+            data = espn.get_url(scoreboard_url + "&groups=" + str(conferenceID))
+        else:
+            data = espn.get_url(scoreboard_url)
 
     print("\n" + "-"*40 + "\n")
 

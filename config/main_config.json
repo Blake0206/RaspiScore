@@ -1,6 +1,9 @@
 {
     "leagues": {
-        "displayed_leagues": ["ncaam", "ncaaw", "ncaaf"],
+        "displayed_leagues": ["ncaaf", "ncaam", "ncaaw"],
+        "ncaaf_conference": 0,
+        "ncaam_conference": 0,
+        "ncaaw_conference": 0,
         "league_display_time": 3,
         "league_logo_size": 100
     },

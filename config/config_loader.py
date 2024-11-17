@@ -6,6 +6,7 @@ class ConfigError(Exception):
 
 class ConfigLoader:
     VALID_LEAGUES = {"mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl"}
+    VALID_CONFERENCE_IDs = {0, 80, 81, 1, 4, 5, 8, 9, 12, 15, 17, 18, 20, 21, 22, 24, 25, 27, 28, 29, 30, 31, 32, 35, 37, 48, 151, 177, 179}
     VALID_NEWS_SOURCES = {"espn", "fox"}
     VALID_FIRST_DISPLAY = {"events", "news"}
 
@@ -24,7 +25,16 @@ class ConfigLoader:
         displayed_leagues = leagues.get("displayed_leagues", [])
         if not isinstance(displayed_leagues, list) or not all(l in self.VALID_LEAGUES for l in displayed_leagues):
             raise ConfigError(f"displayed_leagues must be a list containing only {self.VALID_LEAGUES}")
-        
+
+        if leagues.get("ncaaf_conference") not in self.VALID_CONFERENCE_IDs:
+            raise ConfigError(f"ncaaf_conference must be one of {self.VALID_CONFERENCE_IDs}")
+
+        if leagues.get("ncaam_conference") not in self.VALID_CONFERENCE_IDs:
+            raise ConfigError(f"ncaam_conference must be one of {self.VALID_CONFERENCE_IDs}")
+
+        if leagues.get("ncaaw_conference") not in self.VALID_CONFERENCE_IDs:
+            raise ConfigError(f"ncaaw_conference must be one of {self.VALID_CONFERENCE_IDs}")
+                                
         if not isinstance(leagues.get("league_display_time"), int) or leagues["league_display_time"] <= 0:
             raise ConfigError("league_display_time must be a positive integer")
         
@@ -60,7 +70,7 @@ class ConfigLoader:
             raise ConfigError("display_news must be a boolean")
         
         if news.get("source") not in self.VALID_NEWS_SOURCES:
-            raise ConfigError(f"news.source must be one of {self.VALID_NEWS_SOURCES}.")
+            raise ConfigError(f"source must be one of {self.VALID_NEWS_SOURCES}")
         
         if not isinstance(news.get("news_display_time"), int) or news["news_display_time"] <= 0:
             raise ConfigError("news_display_time must be a positive integer")
@@ -80,7 +90,7 @@ class ConfigLoader:
             raise ConfigError("time_correction must be an integer")
         
         if other.get("first_display") not in self.VALID_FIRST_DISPLAY:
-            raise ConfigError(f"first_display must be one of {self.VALID_FIRST_DISPLAY}.")
+            raise ConfigError(f"first_display must be one of {self.VALID_FIRST_DISPLAY}")
         
         if not isinstance(other.get("text_color"), list) or len(other["text_color"]) != 3:
             raise ConfigError("text_color must be a list of three values")

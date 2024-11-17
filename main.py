@@ -38,17 +38,17 @@ def run_app(league, news_source, matrix, config):
             category = 'football'
             espn_sport = 'college-football'
             fox_sport = 'college-football'
-            events_data = ncaaf.getData()
+            events_data = ncaaf.getData(config["leagues"]["ncaaf_conference"])
         case 'ncaam':
             category = 'basketball'
             espn_sport = 'mens-college-basketball'
             fox_sport = 'college-basketball'
-            events_data = ncaam.getData()
+            events_data = ncaam.getData(config["leagues"]["ncaam_conference"])
         case 'ncaaw':
             category = 'basketball'
             espn_sport = 'womens-college-basketball'
             fox_sport = 'womens-college-basketball'
-            events_data = ncaaw.getData()
+            events_data = ncaaw.getData(config["leagues"]["ncaaw_conference"])
         case 'wnba':
             category = 'basketball'
             espn_sport = 'wnba'

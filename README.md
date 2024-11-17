@@ -20,8 +20,14 @@ By default, the emulator will run on [http://localhost:8888](http://localhost:88
 
 ### Leagues
 `displayed_leagues` - sports leagues that are displayed, accepts list containing "mlb", "nba", "nfl", "ncaaf", "ncaam", "ncaaw", "wnba", "nhl" \
+`ncaaf_conference` - the college football conference that event data will be displayed for, specific integers are accepted \
+`ncaam_conference` - the mens college basketball conference that event data will be displayed for, specific integers are accepted\
+`ncaam_conference` - the womens college basketball conference that event data will be displayed for, specific integers are accepted \
 `league_display_time` - time in seconds that the league logo is displayed, positive integers are accepted \
 `league_logo_size` - size in pixels of the league logo displayed before events/news, positive integers are accepted
+
+*List of conference IDs can be found [here](https://gist.github.com/nntrn/ee26cb2a0716de0947a0a4e9a157bc1c?permalink_comment_id=5178284#gistcomment-5178284)* \
+*Enter 0 for Top 25*
 
 ### Events
 `display_events` - determines if events are displayed, booleans are accepted \
