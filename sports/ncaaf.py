@@ -24,8 +24,8 @@ def getData():
             print(getBroadcasts.main(event))
             event_data["broadcasts"] = getBroadcasts.main(event)  
         
-        print(getOdds.main('football', 'ncf', event, short_detail))
-        event_data["odds"] = getOdds.main('football', 'ncf', event, short_detail)
+        print(getOdds.main('football', 'college-football', event, short_detail))
+        event_data["odds"] = getOdds.main('football', 'college-football', event, short_detail)
 
         if short_detail.find(":") != -1 and short_detail.find("EST") != -1:
             event_data["start time"] = changeTime.main(short_detail)
