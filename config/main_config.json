@@ -1,4 +1,8 @@
 {
+    "authentication": {
+        "username": "raspiscore",
+        "password": "password"
+    },
     "leagues": {
         "displayed_leagues": [
             "nfl",

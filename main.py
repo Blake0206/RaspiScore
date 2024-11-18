@@ -1,5 +1,7 @@
 import multiprocessing
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for, session
+from waitress import serve
+import hashlib
 import json
 import matrix_display.splashscreen1x128 as splashscreen1x128
 import news.foxnews as foxnews, news.espnnews as espnnews
@@ -13,6 +15,8 @@ from config.config_loader import ConfigError, ConfigLoader
 import socket
 
 app = Flask(__name__)
+app.secret_key = "secret_key"
+app.config["SESSION_PERMANENT"] = False
 CONFIG_FILE = "./config/main_config.json"
 main_thread = None
 
@@ -23,6 +27,33 @@ def get_ip():
             return str(s.getsockname()[0])
     except socket.error:
         return "Unable to determine IP address"
+    
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        config = load_config()
+        username = request.form.get("username")
+        password = request.form.get("password")
+        stored_username = config["authentication"]["username"]
+        stored_password = hash_password(config["authentication"]["password"])
+
+        if username == stored_username and hash_password(password) == stored_password:
+            session["logged_in"] = True
+
+            next_page = session.pop("next", url_for("index"))
+            return redirect(next_page)
+        else:
+            return render_template("login.html", error="Invalid credentials")
+
+    return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("login"))
 
 def load_config():
     try:
@@ -37,6 +68,9 @@ def save_config(config):
 
 @app.route("/")
 def index():
+    if not session.get("logged_in"):
+        session["next"] = request.url
+        return redirect(url_for("login"))
     config = load_config()
 
     # Join the 'displayed_leagues' list as a string for display in the form
@@ -180,5 +214,5 @@ def restart():
 
 if __name__ == "__main__":
     start_app()  # Start the main app
-
-    app.run(host='0.0.0.0', port=5001)
+    
+    serve(app, host='0.0.0.0', port=5001)
