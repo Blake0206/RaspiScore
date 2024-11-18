@@ -1,6 +1,7 @@
 import multiprocessing
 from flask import Flask, request, jsonify, render_template
 import json
+import matrix_display.splashscreen1x128 as splashscreen1x128
 import news.foxnews as foxnews, news.espnnews as espnnews
 import matrix_display.displayLeague1x128 as displayLeague1x128
 import matrix_display.displayEvents1x128 as displayEvents1x128
@@ -9,10 +10,19 @@ import sports.mlb as mlb, sports.nfl as nfl, sports.nba as nba, sports.ncaaf as 
 import sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports.nhl as nhl
 from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions
 from config.config_loader import ConfigError, ConfigLoader
+import socket
 
 app = Flask(__name__)
 CONFIG_FILE = "./config/main_config.json"
 main_thread = None
+
+def get_ip():
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            s.connect(("8.8.8.8", 80))
+            return str(s.getsockname()[0])
+    except socket.error:
+        return "Unable to determine IP address"
 
 def load_config():
     try:
@@ -33,27 +43,6 @@ def index():
     displayed_leagues = ", ".join(config['leagues']['displayed_leagues'])
 
     return render_template("index.html", config=config, displayed_leagues=displayed_leagues)
-
-'''
-@app.route("/update", methods=["POST"])
-def update_config():
-    new_values = request.json
-    config = load_config()
-
-    for key, value in new_values.items():
-        keys = key.split('.')
-        target = config
-        for k in keys[:-1]:
-            target = target[k]
-        target[keys[-1]] = value
-    
-    try:
-        save_config(config)
-        ConfigLoader(CONFIG_FILE).validate_config()
-        return jsonify({"message": "Configuration updated successfully", "new_config": config})
-    except ConfigError as e:
-        return jsonify({"error": str(e)}), 400
-'''
         
 def setup_matrix():
     options = RGBMatrixOptions()
@@ -136,32 +125,31 @@ def run_main_app():
     try:
         matrix = setup_matrix()
 
-        while True:
-            config = load_config()
-            leagues = config['leagues']['displayed_leagues']
-            news = config['news']['source']
+        config = load_config()
+        leagues = config['leagues']['displayed_leagues']
+        news = config['news']['source']
 
+        splashscreen1x128.main(get_ip(), matrix, config)
+
+        while True:
             for league in leagues:
                 run_app(league, news, matrix, config)
     except KeyboardInterrupt:
         print("Quitting program...")
 
 def stop_app():
-    """Function to stop the main application."""
     global main_thread
     if main_thread and main_thread.is_alive():
-        main_thread.terminate()  # Forcefully stop the thread (used for demonstration)
+        main_thread.terminate()
         print("App stopped.")
 
 def restart_app():
-    """Restart the Flask app."""
     print("Restarting app...")
-    stop_app()  # Stop the app
+    stop_app()
     # Restart the app by creating a new thread and starting it again
     start_app()
 
 def start_app():
-    """Function to start the app."""
     global main_thread
     main_thread = multiprocessing.Process(target=run_main_app)
     main_thread.start()
@@ -187,7 +175,6 @@ def update_config():
 
 @app.route("/restart", methods=["POST"])
 def restart():
-    """Route to restart the app."""
     restart_app()
     return jsonify({"message": "App is restarting..."})
 
