@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Configuration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="range"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Raspberry Pi Configuration</h1>
+        <div id="response-message"></div>
+        
+        <form id="config-form">
+            <!-- Leagues Settings -->
+            <div class="section">
+                <h2>Leagues</h2>
+                <div class="form-group">
+                    <label for="displayed_leagues">Displayed Leagues (comma-separated):</label>
+                    <input type="text" id="displayed_leagues" name="leagues.displayed_leagues" value="{{ displayed_leagues }}" />
+                </div>
+                <div class="form-group">
+                    <label for="ncaaf_conference">NCAAF Conference ID:</label>
+                    <input type="number" id="ncaaf_conference" name="leagues.ncaaf_conference" value="{{ config.leagues.ncaaf_conference }}" />
+                </div>
+                <div class="form-group">
+                    <label for="ncaam_conference">NCAAM Conference ID:</label>
+                    <input type="number" id="ncaam_conference" name="leagues.ncaam_conference" value="{{ config.leagues.ncaam_conference }}" />
+                </div>
+                <div class="form-group">
+                    <label for="ncaaw_conference">NCAAW Conference ID:</label>
+                    <input type="number" id="ncaaw_conference" name="leagues.ncaaw_conference" value="{{ config.leagues.ncaaw_conference }}" />
+                </div>
+                <div class="form-group">
+                    <label for="league_display_time">League Display Time (seconds):</label>
+                    <input type="number" id="league_display_time" name="leagues.league_display_time" value="{{ config.leagues.league_display_time }}" />
+                </div>
+                <div class="form-group">
+                    <label for="league_logo_size">League Logo Size:</label>
+                    <input type="number" id="league_logo_size" name="leagues.league_logo_size" value="{{ config.leagues.league_logo_size }}" />
+                </div>
+            </div>
+
+            <!-- Events Settings -->
+            <div class="section">
+                <h2>Events</h2>
+                <div class="form-group">
+                    <label for="display_events">Display Events:</label>
+                    <input type="checkbox" id="display_events" name="events.display_events" {% if config.events.display_events %}checked{% endif %} />
+                </div>
+                <div class="form-group">
+                    <label for="event_display_time">Event Display Time (seconds):</label>
+                    <input type="number" id="event_display_time" name="events.event_display_time" value="{{ config.events.event_display_time }}" />
+                </div>
+                <div class="form-group">
+                    <label for="team_logo_size">Team Logo Size:</label>
+                    <input type="number" id="team_logo_size" name="events.team_logo_size" value="{{ config.events.team_logo_size }}" />
+                </div>
+                <div class="form-group">
+                    <label for="team_logo_offset">Team Logo Offset:</label>
+                    <input type="number" id="team_logo_offset" name="events.team_logo_offset" value="{{ config.events.team_logo_offset }}" />
+                </div>
+                <div class="form-group">
+                    <label for="team_logo_mirrored">Mirrored Team Logos:</label>
+                    <input type="checkbox" id="team_logo_mirrored" name="events.team_logo_mirrored" {% if config.events.team_logo_mirrored %}checked{% endif %} />
+                </div>
+                <div class="form-group">
+                    <label for="team_logo_opacity">Team Logo Opacity:</label>
+                    <input type="range" id="team_logo_opacity" name="events.team_logo_opacity" min="0" max="1" step="0.01" value="{{ config.events.team_logo_opacity }}" />
+                </div>
+                <div class="form-group">
+                    <label for="score_offset">Score Offset:</label>
+                    <input type="number" id="score_offset" name="events.score_offset" value="{{ config.events.score_offset }}" />
+                </div>
+            </div>
+
+            <!-- News Settings -->
+            <div class="section">
+                <h2>News</h2>
+                <div class="form-group">
+                    <label for="display_news">Display News:</label>
+                    <input type="checkbox" id="display_news" name="news.display_news" {% if config.news.display_news %}checked{% endif %} />
+                </div>
+                <div class="form-group">
+                    <label for="source">News Source:</label>
+                    <select id="source" name="news.source">
+                        <option value="espn" {% if config.news.source == 'espn' %}selected{% endif %}>ESPN</option>
+                        <option value="fox" {% if config.news.source == 'fox' %}selected{% endif %}>Fox</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="news_display_time">News Display Time (seconds):</label>
+                    <input type="number" id="news_display_time" name="news.news_display_time" value="{{ config.news.news_display_time }}" />
+                </div>
+                <div class="form-group">
+                    <label for="display_source_logo">Display Source Logo:</label>
+                    <input type="checkbox" id="display_source_logo" name="news.display_source_logo" {% if config.news.display_source_logo %}checked{% endif %} />
+                </div>
+                <div class="form-group">
+                    <label for="source_logo_opacity">Source Logo Opacity:</label>
+                    <input type="range" id="source_logo_opacity" name="news.source_logo_opacity" min="0" max="1" step="0.01" value="{{ config.news.source_logo_opacity }}" />
+
+            <!-- Other Settings -->
+            <div class="section">
+                <h2>Other Settings</h2>
+                <div class="form-group">
+                    <label for="first_display">First Display:</label>
+                    <select id="first_display" name="other.first_display">
+                        <option value="events" {% if config.other.first_display == 'events' %}selected{% endif %}>Events</option>
+                        <option value="news" {% if config.other.first_display == 'news' %}selected{% endif %}>News</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time_correction">Time Correction:</label>
+                    <input type="number" id="time_correction" name="other.time_correction" value="{{ config.other.time_correction }}" />
+                </div>
+                <div class="form-group">
+                    <label for="text_color">Text Color (RGB):</label>
+                    <input type="text" id="text_color" name="other.text_color" value="{{ config.other.text_color | join(', ') }}" />
+                </div>
+                <div class="form-group">
+                    <label for="outline_color">Outline Color
+                        <input type="text" id="outline_color" name="other.outline_color" value="{{ config.other.outline_color | join(', ') }}" />
+                    </div>
+                </div>
+    
+                <!-- Update Config Button -->
+                <div class="form-group">
+                    <button type="submit">Update Config</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            // Handle form submission and send data as JSON
+            document.getElementById('config-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const formData = new FormData(this);
+                const data = {};
+                
+                // Include all form fields, including checkboxes
+                Array.from(this.elements).forEach(element => {
+                    if (element.type === 'checkbox') {
+                        // Set the value as true or false for checkboxes
+                        data[element.name] = element.checked;
+                    } else if (element.type === 'text' || element.type === 'number' || element.type === 'range' || element.tagName === 'SELECT') {
+                        // Handle other input types
+                        if (element.value.includes(',')) {
+                            // Convert comma-separated strings to arrays
+                            data[element.name] = element.value.split(',').map(item => item.trim());
+                        } else {
+                            // Preserve original types for numbers
+                            const numberValue = parseFloat(element.value);
+                            data[element.name] = isNaN(numberValue) ? element.value : numberValue;
+                        }
+                    }
+                });
+                
+                fetch('/update', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+
+                .then(response => response.json())
+                .then(responseData => {
+                    
+                    if (responseData.message) {
+                        document.getElementById('response-message').innerHTML = '<p class="success">' + responseData.message + '</p>';
+
+                        // After successful config update, restart the app
+                        fetch('/restart', {
+                            method: 'POST',
+                        })
+                        .then(restartResponse => restartResponse.json())
+                        .then(restartData => {
+                            if (restartData.message) {
+                                alert(restartData.message);
+                            }
+                        });
+                    } else {
+                        document.getElementById('response-message').innerHTML = '<p class="error">' + responseData.error + '</p>';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('response-message').innerHTML = '<p class="error">Error: ' + error.message + '</p>';
+                });
+            });
+        </script>        
+    </body>
+    </html>

@@ -1,3 +1,6 @@
+import multiprocessing
+from flask import Flask, request, jsonify, render_template
+import json
 import news.foxnews as foxnews, news.espnnews as espnnews
 import matrix_display.displayLeague1x128 as displayLeague1x128
 import matrix_display.displayEvents1x128 as displayEvents1x128
@@ -7,6 +10,51 @@ import sports.ncaam as ncaam, sports.ncaaw as ncaaw, sports.wnba as wnba, sports
 from RGBMatrixEmulator import RGBMatrix, RGBMatrixOptions
 from config.config_loader import ConfigError, ConfigLoader
 
+app = Flask(__name__)
+CONFIG_FILE = "./config/main_config.json"
+main_thread = None
+
+def load_config():
+    try:
+        return ConfigLoader(CONFIG_FILE).config
+    except ConfigError as e:
+        print(f"Configuration Error: {e}")
+        return {}
+    
+def save_config(config):
+    with open(CONFIG_FILE, "w") as file:
+        json.dump(config, file, indent=4)
+
+@app.route("/")
+def index():
+    config = load_config()
+
+    # Join the 'displayed_leagues' list as a string for display in the form
+    displayed_leagues = ", ".join(config['leagues']['displayed_leagues'])
+
+    return render_template("index.html", config=config, displayed_leagues=displayed_leagues)
+
+'''
+@app.route("/update", methods=["POST"])
+def update_config():
+    new_values = request.json
+    config = load_config()
+
+    for key, value in new_values.items():
+        keys = key.split('.')
+        target = config
+        for k in keys[:-1]:
+            target = target[k]
+        target[keys[-1]] = value
+    
+    try:
+        save_config(config)
+        ConfigLoader(CONFIG_FILE).validate_config()
+        return jsonify({"message": "Configuration updated successfully", "new_config": config})
+    except ConfigError as e:
+        return jsonify({"error": str(e)}), 400
+'''
+        
 def setup_matrix():
     options = RGBMatrixOptions()
     options.rows = 64
@@ -74,31 +122,76 @@ def run_app(league, news_source, matrix, config):
         print('-'*80)
 
     displayLeague1x128.main(league, matrix, config)
-    first_display = config['other']['first_display']
 
-    if first_display == 'events':
+    if config['other']['first_display'] == 'events':
         displayEvents1x128.main(events_data, matrix, config)
         if config['news']['display_news']:
             displayNews1x128.main(headlines_data, matrix, config)
-    elif first_display == 'news':
+    elif config['other']['first_display'] == 'news':
         displayNews1x128.main(headlines_data, matrix, config)
         if config['events']['display_events']:
             displayEvents1x128.main(events_data, matrix, config)
 
-
-if __name__ == "__main__":
+def run_main_app():
     try:
-        config_loader = ConfigLoader("./config/main_config.json")
-        config = config_loader.config
         matrix = setup_matrix()
 
-        leagues = config['leagues']['displayed_leagues']
-        news = config['news']['source']
-        
         while True:
+            config = load_config()
+            leagues = config['leagues']['displayed_leagues']
+            news = config['news']['source']
+
             for league in leagues:
                 run_app(league, news, matrix, config)
-    except ConfigError as e:
-        print(f"Configuration Error: {e}")
     except KeyboardInterrupt:
         print("Quitting program...")
+
+def stop_app():
+    """Function to stop the main application."""
+    global main_thread
+    if main_thread and main_thread.is_alive():
+        main_thread.terminate()  # Forcefully stop the thread (used for demonstration)
+        print("App stopped.")
+
+def restart_app():
+    """Restart the Flask app."""
+    print("Restarting app...")
+    stop_app()  # Stop the app
+    # Restart the app by creating a new thread and starting it again
+    start_app()
+
+def start_app():
+    """Function to start the app."""
+    global main_thread
+    main_thread = multiprocessing.Process(target=run_main_app)
+    main_thread.start()
+
+@app.route("/update", methods=["POST"])
+def update_config():
+    new_values = request.json
+    config = load_config()
+
+    for key, value in new_values.items():
+        keys = key.split('.')
+        target = config
+        for k in keys[:-1]:
+            target = target[k]
+        target[keys[-1]] = value
+    
+    try:
+        save_config(config)
+        ConfigLoader(CONFIG_FILE).validate_config()
+        return jsonify({"message": "Configuration updated successfully", "new_config": config})
+    except ConfigError as e:
+        return jsonify({"error": str(e)}), 400
+
+@app.route("/restart", methods=["POST"])
+def restart():
+    """Route to restart the app."""
+    restart_app()
+    return jsonify({"message": "App is restarting..."})
+
+if __name__ == "__main__":
+    start_app()  # Start the main app
+
+    app.run(host='0.0.0.0', port=5001)

@@ -1,6 +1,10 @@
 {
     "leagues": {
-        "displayed_leagues": ["ncaaf", "ncaam", "ncaaw"],
+        "displayed_leagues": [
+            "nfl",
+            "ncaam",
+            "ncaaw"
+        ],
         "ncaaf_conference": 0,
         "ncaam_conference": 0,
         "ncaaw_conference": 0,
@@ -19,7 +23,7 @@
     "news": {
         "display_news": true,
         "source": "espn",
-        "news_display_time": 5,
+        "news_display_time": 3,
         "display_source_logo": true,
         "source_logo_opacity": 0.4,
         "line_spacing": 10
@@ -27,7 +31,15 @@
     "other": {
         "first_display": "events",
         "time_correction": -2,
-        "text_color": [255, 255, 255],
-        "outline_color": [0, 0, 0]
+        "text_color": [
+            "255",
+            "255",
+            "255"
+        ],
+        "outline_color": [
+            "0",
+            "0",
+            "0"
+        ]
     }
 }

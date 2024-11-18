@@ -7,7 +7,7 @@ def main(category, sport, event, short_detail):
         if len(event_id) == 9 and event_id.isdigit():
             event_id = str(event_id)
             odds = espn.get_new_json("https://sports.core.api.espn.com/v2/sports/" + category + "/leagues/" + sport + "/events/" + event_id + "/competitions/" + event_id + "/odds")
-            if type(odds) == dict:
+            if type(odds) == dict and len(odds["items"]) > 0:
                 spread = odds["items"][0]["details"]
                 total = odds["items"][0]["current"]["total"]["alternateDisplayValue"]
                 try:
