@@ -1,5 +1,4 @@
 import espn_scraper as espn
-import json
 import methods.getOdds as getOdds
 import methods.getBroadcasts as getBroadcasts
 import methods.changeTime as changeTime
@@ -11,9 +10,6 @@ def getData():
 
     for scoreboard_url in urls:
         data = espn.get_url(scoreboard_url)
-
-    #with open('sports/baseball.json') as f:
-    #    data = json.load(f)
 
     print("\n" + "-"*40 + "\n")
 

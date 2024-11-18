@@ -1,5 +1,4 @@
 import espn_scraper as espn
-import json
 import methods.getOdds as getOdds
 import methods.getBroadcasts as getBroadcasts
 import methods.changeTime as changeTime
