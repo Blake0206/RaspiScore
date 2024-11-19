@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template, redirect, url_for, s
 from waitress import serve
 import hashlib
 import json
-import matrix_display.splashscreen1x128 as splashscreen1x128
+import matrix_display.splashScreen1x128 as splashscreen1x128
 import news.foxnews as foxnews, news.espnnews as espnnews
 import matrix_display.displayLeague1x128 as displayLeague1x128
 import matrix_display.displayEvents1x128 as displayEvents1x128
@@ -179,8 +179,8 @@ def stop_app():
 
 def restart_app():
     print("Restarting app...")
-    stop_app()
     # Restart the app by creating a new thread and starting it again
+    stop_app()
     start_app()
 
 def start_app():

@@ -8,7 +8,6 @@ def display_splash(ip_address, matrix, config):
     offscreen_canvas.Clear()
 
     font = graphics.Font()
-    #font.LoadFont("./matrix_display/fonts/ic16x16u.bdf")
     font.LoadFont("./matrix_display/fonts/7x13.bdf")
     font_width = 7
 
